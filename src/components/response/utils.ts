@@ -27,7 +27,7 @@ export const generateInitFields = (responses: Response[], storedAnswer: StoredAn
         ...otherObj,
       };
     } else {
-      let initField: string | string[] | object | null = '';
+      let initField: string | string[] | number | object | null = '';
       if (response.paramCapture) {
         initField = queryParameters.get(response.paramCapture);
       } else if (response.type === 'reactive' || response.type === 'ranking-sublist' || response.type === 'ranking-categorical' || response.type === 'ranking-pairwise') {
@@ -37,7 +37,7 @@ export const generateInitFields = (responses: Response[], storedAnswer: StoredAn
           response.questionOptions.map((entry) => [entry, '']),
         );
       } else if (response.type === 'slider' && response.startingValue) {
-        initField = response.startingValue.toString();
+        initField = response.startingValue;
       }
 
       initObj = {
