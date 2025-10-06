@@ -1,7 +1,7 @@
 import {
   Suspense, useEffect, useMemo, useRef, useState,
 } from 'react';
-import { useSearchParams } from 'react-router';
+import { useNavigate, useParams, useSearchParams } from 'react-router';
 import {
   Box, Center, Loader, Text, Title,
 } from '@mantine/core';
@@ -12,7 +12,9 @@ import { ImageController } from './ImageController';
 import { ReactComponentController } from './ReactComponentController';
 import { MarkdownController } from './MarkdownController';
 import { useStudyConfig } from '../store/hooks/useStudyConfig';
-import { useCurrentComponent, useCurrentIdentifier, useCurrentStep } from '../routes/utils';
+import {
+  useCurrentComponent, useCurrentIdentifier, useCurrentStep, useStudyId,
+} from '../routes/utils';
 import { useStoredAnswer } from '../store/hooks/useStoredAnswer';
 import { ReactMarkdownWrapper } from '../components/ReactMarkdownWrapper';
 import { IndividualComponent } from '../parser/types';
@@ -33,7 +35,7 @@ import { studyComponentToIndividualComponent } from '../utils/handleComponentInh
 import { useFetchStylesheet } from '../utils/fetchStylesheet';
 import { ScreenRecordingReplay } from '../components/screenRecording/ScreenRecordingReplay';
 import { useScreenRecordingContext } from '../store/hooks/useScreenRecording';
-import { useRecordingConfig } from '../store/hooks/useRecordingConfig';
+import { decryptIndex, encryptIndex } from '../utils/encryptDecryptIndex';
 
 // current active stimuli presented to the user
 export function ComponentController() {
@@ -41,6 +43,7 @@ export function ComponentController() {
   const studyConfig = useStudyConfig();
   const currentStep = useCurrentStep();
   const currentComponent = useCurrentComponent();
+  const studyId = useStudyId();
 
   const stepConfig = studyConfig.components[currentComponent];
   const { storageEngine } = useStorageEngine();
@@ -49,27 +52,28 @@ export function ComponentController() {
   const audioStream = useRef<MediaRecorder | null>(null);
   const analysisCanPlayScreenRecording = useStoreSelector((state) => state.analysisCanPlayScreenRecording);
 
+  const [prevTrialName, setPrevTrialName] = useState<string | null>(null);
   const { setIsRecording, setAnalysisCanPlayScreenRecording } = useStoreActions();
-
   const analysisProvState = useStoreSelector((state) => state.analysisProvState.stimulus);
 
   const screenCaptureTrialName = useRef<string | null>(null);
 
   const identifier = useCurrentIdentifier();
 
-  const {
-    studyHasScreenRecording, studyHasAudioRecording, currentComponentHasAudioRecording, currentComponentHasScreenRecording,
-  } = useRecordingConfig();
+  const navigate = useNavigate();
+
+  const screenRecording = useScreenRecordingContext();
 
   const {
-    isMediaCapturing, stopScreenCapture, startScreenRecording, stopScreenRecording, combinedMediaRecorder: screenRecordingStream,
-  } = useScreenRecordingContext();
+    isScreenCapturing, stopScreenCapture, startScreenRecording, stopScreenRecording, combinedMediaRecorder: screenRecordingStream,
+  } = screenRecording;
 
   const isAnalysis = useIsAnalysis();
 
   // If we have a trial, use that config to render the right component else use the step
   const status = useStoredAnswer();
   const sequence = useStoreSelector((state) => state.sequence);
+  const modes = useStoreSelector((state) => state.modes);
 
   const [searchParams] = useSearchParams();
 
@@ -91,10 +95,13 @@ export function ComponentController() {
     }
   }, [setAlertModal, storageEngine, storeDispatch]);
 
-  // For study that does not involve screen recording
   useEffect(() => {
-    if (!studyConfig || studyHasScreenRecording || !studyHasAudioRecording || !storageEngine || (status && status.endTime > 0) || isAnalysis) {
+    if (!studyConfig || !studyConfig.uiConfig.recordAudio || studyConfig.uiConfig.recordScreen || !storageEngine || (status && status.endTime > 0) || isAnalysis) {
       return;
+    }
+
+    if (audioStream.current && prevTrialName) {
+      storageEngine.saveAudio(audioStream.current, prevTrialName);
     }
 
     if (audioStream.current) {
@@ -104,7 +111,8 @@ export function ComponentController() {
       audioStream.current = null;
     }
 
-    if ((stepConfig && !currentComponentHasAudioRecording) || currentComponent === 'end') {
+    if ((stepConfig && stepConfig.recordAudio !== undefined && !stepConfig.recordAudio) || currentComponent === 'end') {
+      setPrevTrialName(null);
       storeDispatch(setIsRecording(false));
     } else {
       navigator.mediaDevices.getUserMedia({
@@ -112,37 +120,17 @@ export function ComponentController() {
       }).then((s) => {
         const recorder = new MediaRecorder(s);
         audioStream.current = recorder;
-
-        let chunks : Blob[] = [];
-
-        recorder.addEventListener('start', () => {
-          chunks = [];
-        });
-
-        recorder.addEventListener('dataavailable', (event: BlobEvent) => {
-          if (event.data && event.data.size > 0) {
-            chunks.push(event.data);
-          }
-        });
-
-        const trialName = identifier;
-        recorder.addEventListener('stop', () => {
-          const { mimeType } = recorder;
-          const blob = new Blob(chunks, { type: mimeType });
-          storageEngine?.saveAudioRecording(blob, trialName);
-        });
-
         audioStream.current.start();
         storeDispatch(setIsRecording(true));
+        setPrevTrialName(identifier);
       });
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentComponent, identifier, currentComponentHasAudioRecording]);
+  }, [currentComponent, identifier]);
 
-  // For study involving screen recording
   useEffect(() => {
-    if (!studyConfig || !(studyHasScreenRecording) || !storageEngine || (status && status.endTime > 0) || isAnalysis) {
+    if (!studyConfig || !studyConfig.uiConfig.recordScreen || !storageEngine || (status && status.endTime > 0) || isAnalysis) {
       return;
     }
 
@@ -151,7 +139,7 @@ export function ComponentController() {
       screenCaptureTrialName.current = null;
     }
 
-    if (currentComponent !== 'end' && isMediaCapturing && screenCaptureTrialName.current !== identifier && (currentComponentHasAudioRecording || currentComponentHasScreenRecording)) {
+    if (currentComponent !== 'end' && isScreenCapturing && screenCaptureTrialName.current !== identifier && (stepConfig.recordScreen === undefined || stepConfig.recordScreen === true)) {
       screenCaptureTrialName.current = identifier;
       startScreenRecording(identifier);
     }
@@ -161,7 +149,7 @@ export function ComponentController() {
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentComponent, identifier, currentComponentHasAudioRecording, currentComponentHasScreenRecording, isMediaCapturing]);
+  }, [currentComponent, identifier]);
 
   // Find current block, if it has an ID, add it as a participant tag
   const [blockForStep, setBlockForStep] = useState<string[]>([]);
@@ -222,6 +210,27 @@ export function ComponentController() {
 
   useFetchStylesheet(currentConfig?.stylesheetPath);
 
+  const { funcIndex } = useParams();
+
+  // Automatically forward a user to their last completed trial if they are returning to the study
+  useEffect(() => {
+    if (status && status.endTime > 0 && !isAnalysis && !modes.studyNavigatorEnabled && currentComponent !== 'end' && !currentComponent.startsWith('__') && typeof currentStep === 'number') {
+      let lastAnsweredTrialOrder = '0';
+      Object.values(answers).forEach((a) => {
+        if (a.endTime > 0) {
+          lastAnsweredTrialOrder = a.trialOrder;
+        }
+      });
+      const [trialOrderIndex, trialOrderFuncIndex] = lastAnsweredTrialOrder.split('_');
+      const indexNumber = Number(trialOrderIndex);
+      const funcIndexNumber = trialOrderFuncIndex ? Number(trialOrderFuncIndex) : undefined;
+
+      if (indexNumber > currentStep || (indexNumber === currentStep && funcIndexNumber !== undefined && funcIndex !== undefined && funcIndexNumber > Number(decryptIndex(funcIndex)))) {
+        navigate(`/${studyId}/${encryptIndex(indexNumber)}${funcIndexNumber !== undefined ? `/${funcIndexNumber}` : ''}`);
+      }
+    }
+  }, [answers, currentComponent, currentStep, funcIndex, isAnalysis, modes.studyNavigatorEnabled, navigate, status, studyId]);
+
   // We're not using hooks below here, so we can return early if we're at the end of the study.
   // This avoids issues with the component config being undefined for the end of the study.
   if (currentComponent === 'end') {
@@ -267,7 +276,7 @@ export function ComponentController() {
   const instructionLocation = currentConfig.instructionLocation ?? studyConfig.uiConfig.instructionLocation ?? 'sidebar';
   const instructionInSideBar = instructionLocation === 'sidebar';
 
-  if (studyHasScreenRecording && isAnalysis && analysisCanPlayScreenRecording) return <ScreenRecordingReplay key={`${currentStep}-stimulus`} />;
+  if (studyConfig.uiConfig.recordScreen && isAnalysis && analysisCanPlayScreenRecording) return <ScreenRecordingReplay key={`${currentStep}-stimulus`} />;
 
   return (
     <>
