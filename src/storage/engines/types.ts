@@ -41,6 +41,7 @@ export type SequenceAssignment = {
   total: number; // Total number of questions/steps
   answered: string[]; // Number of answered questions
   isDynamic: boolean; // Whether the study contains dynamic blocks
+  stage: string; // The stage of the participant in the study
 };
 
 export type REVISIT_MODE = 'dataCollectionEnabled' | 'studyNavigatorEnabled' | 'analyticsInterfacePubliclyAccessible';
@@ -189,6 +190,12 @@ export abstract class StorageEngine {
 
   // Sets the mode for the given studyId. The mode is stored as a record with the mode name as the key and a boolean value indicating whether the mode is enabled or not.
   abstract setMode(studyId: string, mode: REVISIT_MODE, value: boolean): Promise<void>;
+
+  // Gets the stage for the given studyId.
+  abstract getStage(studyId: string): Promise<string>;
+
+  // Sets the stage for the given studyId.
+  abstract setStage(studyId: string, stage: string): Promise<void>;
 
   // Gets the audio URL for the given task and participantId. This method is used to fetch the audio file from the storage engine.
   protected abstract _getAudioUrl(task: string, participantId?: string): Promise<string | null>;
@@ -354,6 +361,7 @@ export abstract class StorageEngine {
     let sequenceAssignments = await this.getAllSequenceAssignments(this.studyId);
 
     const modes = await this.getModes(this.studyId);
+    const currentStage = await this.getStage(this.studyId);
 
     // Find all rejected documents
     const rejectedDocs = sequenceAssignments
@@ -373,6 +381,7 @@ export abstract class StorageEngine {
           total: 0,
           answered: [],
           isDynamic: false,
+          stage: currentStage,
         };
         // Mark the first reject as claimed
         await this._claimSequenceAssignment(firstReject.participantId, firstReject);
@@ -391,6 +400,7 @@ export abstract class StorageEngine {
         total: 0,
         answered: [],
         isDynamic: false,
+        stage: currentStage,
       };
       await this._createSequenceAssignment(this.currentParticipantId, participantSequenceAssignmentData, true);
     }
@@ -458,6 +468,7 @@ export abstract class StorageEngine {
 
     // Get modes
     const modes = await this.getModes(this.studyId);
+    const currentStage = await this.getStage(this.studyId);
 
     if (isParticipantData(participant)) {
       // Participant already initialized
@@ -478,6 +489,7 @@ export abstract class StorageEngine {
       completed: false,
       rejected: false,
       participantTags: [],
+      stage: currentStage,
     };
 
     if (modes.dataCollectionEnabled) {
