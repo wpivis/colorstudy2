@@ -112,7 +112,7 @@ export function ResponseSwitcher({
     }
 
     if (response.type === 'slider' && response.startingValue) {
-      return response.startingValue;
+      return response.startingValue.toString();
     }
 
     return '';
