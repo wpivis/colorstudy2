@@ -182,4 +182,5 @@ export interface StoreState {
   rankingAnswers: Record<string, Record<string, string>>;
   funcSequence: Record<string, string[]>;
   completed: boolean;
+  clickedPrevious: boolean;
 }
