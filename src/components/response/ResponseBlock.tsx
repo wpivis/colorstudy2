@@ -20,7 +20,7 @@ import {
 import { NextButton } from '../NextButton';
 import { useAnswerField } from './utils';
 import { ResponseSwitcher } from './ResponseSwitcher';
-import { ResponseAlert } from './ResponseAlert';
+import { FeedbackAlert } from './FeedbackAlert';
 import { FormElementProvenance, StoredAnswer, ValidationStatus } from '../../store/types';
 import { useStorageEngine } from '../../storage/storageEngineHooks';
 import { useStudyConfig } from '../../store/hooks/useStudyConfig';
@@ -350,7 +350,7 @@ export function ResponseBlock({
                       configInUse={configInUse}
                       disabled={disabledAttempts}
                     />
-                    <ResponseAlert
+                    <FeedbackAlert
                       response={response}
                       correctAnswer={correctAnswer}
                       alertConfig={alertConfig}
@@ -361,7 +361,7 @@ export function ResponseBlock({
                   </>
                 )
               ) : (
-                <ResponseAlert
+                <FeedbackAlert
                   response={response}
                   correctAnswer={correctAnswer}
                   alertConfig={alertConfig}
