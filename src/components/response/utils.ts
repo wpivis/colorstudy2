@@ -1,12 +1,48 @@
 import { useForm } from '@mantine/form';
 import { useEffect, useState } from 'react';
 import {
-  CheckboxResponse, NumberOption, NumericalResponse, RadioResponse, Response, StringOption,
+  CheckboxResponse, DropdownResponse, NumberOption, RadioResponse, Response, StringOption,
 } from '../../parser/types';
 import { StoredAnswer } from '../../store/types';
 
-const queryParameters = new URLSearchParams(window.location.search);
+function checkDropdownResponse(response: Response, value: string[]) {
+  if (response.type === 'dropdown') {
+    // Check max and min selections
+    const dropdownResponse = response as DropdownResponse;
+    const minNotSelected = dropdownResponse.minSelections && value.length < dropdownResponse.minSelections;
+    const maxNotSelected = dropdownResponse.maxSelections && value.length > dropdownResponse.maxSelections;
 
+    if (minNotSelected) {
+      return `Please select at least ${dropdownResponse.minSelections} options`;
+    }
+    if (maxNotSelected) {
+      return `Please select at most ${dropdownResponse.maxSelections} options`;
+    }
+  }
+  return null;
+}
+
+function checkCheckboxResponse(response: Response, value: string[]) {
+  if (response.type === 'checkbox') {
+    // Check max and min selections
+    const checkboxResponse = response as CheckboxResponse;
+    const minNotSelected = checkboxResponse.minSelections && value.length < checkboxResponse.minSelections;
+    const maxNotSelected = checkboxResponse.maxSelections && value.length > checkboxResponse.maxSelections;
+
+    if (minNotSelected && maxNotSelected) {
+      return `Please select between ${checkboxResponse.minSelections} and ${checkboxResponse.maxSelections} options`;
+    }
+    if (minNotSelected) {
+      return `Please select at least ${checkboxResponse.minSelections} options`;
+    }
+    if (maxNotSelected) {
+      return `Please select at most ${checkboxResponse.maxSelections} options`;
+    }
+  }
+  return null;
+}
+
+const queryParameters = new URLSearchParams(window.location.search);
 export const generateInitFields = (responses: Response[], storedAnswer: StoredAnswer['answer']) => {
   let initObj = {};
 
@@ -52,22 +88,6 @@ export const generateInitFields = (responses: Response[], storedAnswer: StoredAn
   return { ...initObj };
 };
 
-function checkCheckboxResponse(response: Response, value: string[]) {
-  if (response.type === 'checkbox') {
-    const checkboxResponse = response as CheckboxResponse;
-    return (checkboxResponse.minSelections && value.length < checkboxResponse.minSelections) || (checkboxResponse.maxSelections && value.length > checkboxResponse.maxSelections);
-  }
-  return null;
-}
-
-function checkNumericalResponse(response: Response, value: number) {
-  if (response.type === 'numerical') {
-    const numericalResponse = response as NumericalResponse;
-    return (numericalResponse.min && value < numericalResponse.min) || (numericalResponse.max && value > numericalResponse.max);
-  }
-  return null;
-}
-
 const generateValidation = (responses: Response[]) => {
   let validateObj = {};
   responses.forEach((response) => {
@@ -97,12 +117,11 @@ const generateValidation = (responses: Response[]) => {
             if (response.type === 'checkbox') {
               return checkCheckboxResponse(response, value);
             }
-            if (response.type === 'numerical') {
-              return checkNumericalResponse(response, value as unknown as number);
+            if (response.type === 'dropdown') {
+              return checkDropdownResponse(response, value);
             }
             return value.length === 0 ? 'Empty input' : null;
           }
-
           if (response.required && response.requiredValue != null && value != null) {
             return value.toString() !== response.requiredValue.toString() ? 'Incorrect input' : null;
           }
@@ -135,63 +154,31 @@ export function useAnswerField(responses: Response[], currentStep: string | numb
   return answerField;
 }
 
-function checkCheckboxError(response: Response, value: string[]) {
-  if (response.type === 'checkbox') {
-    // Check min and max selections
-    const checkboxResponse = response as CheckboxResponse;
+export function areAnswersEqual(
+  ob1: Record<string, unknown>,
+  ob2: Record<string, unknown>,
+) {
+  if (Object.keys(ob1).length !== Object.keys(ob2).length) return false;
 
-    const minNotSelected = checkboxResponse.minSelections && value.length < checkboxResponse.minSelections;
-    const maxNotSelected = checkboxResponse.maxSelections && value.length > checkboxResponse.maxSelections;
+  const keys = Object.keys(ob1);
 
-    if (minNotSelected && maxNotSelected) {
-      return `Please select between ${checkboxResponse.minSelections} and ${checkboxResponse.maxSelections} options`;
-    }
-    if (minNotSelected) {
-      return `Please select at least ${checkboxResponse.minSelections} options`;
-    }
-    if (maxNotSelected) {
-      return `Please select at most ${checkboxResponse.maxSelections} options`;
-    }
-  }
-  return null;
-}
-
-function checkNumericalError(response: Response, value: number) {
-  if (response.type === 'numerical') {
-    // Check min and max values
-    const numericalResponse = response as NumericalResponse;
-    const numValue = typeof value === 'string' ? parseFloat(value) : value;
-
-    const { min, max } = numericalResponse;
-
-    if (min !== undefined && max !== undefined && (numValue < min || numValue > max)) {
-      return `Please enter a value between ${min} and ${max}`;
-    }
-    if (min !== undefined && numValue < min) {
-      return `Please enter a value of ${min} or greater`;
-    }
-    if (max !== undefined && numValue > max) {
-      return `Please enter a value of ${max} or less`;
-    }
-  }
-  return null;
+  return keys.every((key) => JSON.stringify(ob1[key]) === JSON.stringify(ob2[key]));
 }
 
 export function generateErrorMessage(
   response: Response,
-  answer: { value?: number | string | string[] | Record<string, string>; checked?: string[] },
+  answer: { value?: string | string[] | Record<string, string>; checked?: string[] },
   options?: (StringOption | NumberOption)[],
 ) {
   const { requiredValue, requiredLabel } = response;
 
   let error: string | null = '';
-
   if (answer.checked && Array.isArray(requiredValue)) {
     error = requiredValue && [...requiredValue].sort().toString() !== [...answer.checked].sort().toString() ? `Please ${options ? 'select' : 'enter'} ${requiredLabel || requiredValue.toString()} to continue.` : null;
-  } else if (answer.checked) {
-    error = checkCheckboxError(response, answer.checked);
-  } else if (answer.value && typeof answer.value === 'number' && checkNumericalError(response, answer.value)) {
-    error = checkNumericalError(response, answer.value);
+  } else if (answer.checked && response.required) {
+    error = checkCheckboxResponse(response, answer.checked);
+  } else if (answer.value && response.type === 'dropdown') {
+    error = checkDropdownResponse(response, answer.value as string[]);
   } else {
     error = answer.value && requiredValue && requiredValue.toString() !== answer.value.toString() ? `Please ${options ? 'select' : 'enter'} ${requiredLabel || (options ? options.find((opt) => opt.value === requiredValue)?.label : requiredValue.toString())} to continue.` : null;
   }
