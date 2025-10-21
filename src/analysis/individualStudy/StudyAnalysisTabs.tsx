@@ -196,6 +196,8 @@ export function StudyAnalysisTabs({ globalConfig }: { globalConfig: GlobalConfig
                   hasScreenRecording={hasScreenRecording}
                 />
               )}
+            </Flex>
+            <Flex direction="row" align="center">
               <Text size="sm" fw={500}>Stage:</Text>
               <MultiSelect
                 data={availableStages}
@@ -220,9 +222,8 @@ export function StudyAnalysisTabs({ globalConfig }: { globalConfig: GlobalConfig
                     minHeight: '36px',
                   },
                 }}
+                mx="sm"
               />
-            </Flex>
-            <Flex direction="row" align="center">
               <Text mt={-2} size="sm">Participants: </Text>
               <Checkbox.Group
                 value={includedParticipants}
