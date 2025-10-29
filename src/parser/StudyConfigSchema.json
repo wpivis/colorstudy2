@@ -167,10 +167,6 @@
             },
             "type": "array"
           },
-          "responseDividers": {
-            "description": "Whether to show the response dividers. If present, will override the response dividers setting in the uiConfig.",
-            "type": "boolean"
-          },
           "responseOrder": {
             "description": "The order of the responses. Defaults to 'fixed'.",
             "enum": [
@@ -221,6 +217,10 @@
           },
           "withActions": {
             "description": "Whether to include vega actions. Defaults to true.",
+            "type": "boolean"
+          },
+          "withDivider": {
+            "description": "Whether to show the response dividers. If present, will override the response dividers setting in the uiConfig.",
             "type": "boolean"
           },
           "withProgressBar": {
@@ -861,10 +861,6 @@
           },
           "type": "array"
         },
-        "responseDividers": {
-          "description": "Whether to show the response dividers. If present, will override the response dividers setting in the uiConfig.",
-          "type": "boolean"
-        },
         "responseOrder": {
           "description": "The order of the responses. Defaults to 'fixed'.",
           "enum": [
@@ -904,6 +900,10 @@
         "windowEventDebounceTime": {
           "description": "Debounce time in milliseconds for automatically tracked window events. If present, will override the window event debounce time setting in the uiConfig.",
           "type": "number"
+        },
+        "withDivider": {
+          "description": "Whether to show the response dividers. If present, will override the response dividers setting in the uiConfig.",
+          "type": "boolean"
         },
         "withProgressBar": {
           "description": "Controls whether the progress bar is rendered. If present, will override the progress bar setting in the uiConfig.",
@@ -1160,10 +1160,6 @@
           },
           "type": "array"
         },
-        "responseDividers": {
-          "description": "Whether to show the response dividers. If present, will override the response dividers setting in the uiConfig.",
-          "type": "boolean"
-        },
         "responseOrder": {
           "description": "The order of the responses. Defaults to 'fixed'.",
           "enum": [
@@ -1214,6 +1210,10 @@
         },
         "withActions": {
           "description": "Whether to include vega actions. Defaults to true.",
+          "type": "boolean"
+        },
+        "withDivider": {
+          "description": "Whether to show the response dividers. If present, will override the response dividers setting in the uiConfig.",
           "type": "boolean"
         },
         "withProgressBar": {
@@ -1511,10 +1511,6 @@
           },
           "type": "array"
         },
-        "responseDividers": {
-          "description": "Whether to show the response dividers. If present, will override the response dividers setting in the uiConfig.",
-          "type": "boolean"
-        },
         "responseOrder": {
           "description": "The order of the responses. Defaults to 'fixed'.",
           "enum": [
@@ -1554,6 +1550,10 @@
         "windowEventDebounceTime": {
           "description": "Debounce time in milliseconds for automatically tracked window events. If present, will override the window event debounce time setting in the uiConfig.",
           "type": "number"
+        },
+        "withDivider": {
+          "description": "Whether to show the response dividers. If present, will override the response dividers setting in the uiConfig.",
+          "type": "boolean"
         },
         "withProgressBar": {
           "description": "Controls whether the progress bar is rendered. If present, will override the progress bar setting in the uiConfig.",
@@ -1886,10 +1886,6 @@
           },
           "type": "array"
         },
-        "responseDividers": {
-          "description": "Whether to show the response dividers. If present, will override the response dividers setting in the uiConfig.",
-          "type": "boolean"
-        },
         "responseOrder": {
           "description": "The order of the responses. Defaults to 'fixed'.",
           "enum": [
@@ -1929,6 +1925,10 @@
         "windowEventDebounceTime": {
           "description": "Debounce time in milliseconds for automatically tracked window events. If present, will override the window event debounce time setting in the uiConfig.",
           "type": "number"
+        },
+        "withDivider": {
+          "description": "Whether to show the response dividers. If present, will override the response dividers setting in the uiConfig.",
+          "type": "boolean"
         },
         "withProgressBar": {
           "description": "Controls whether the progress bar is rendered. If present, will override the progress bar setting in the uiConfig.",
@@ -2281,10 +2281,6 @@
           },
           "type": "array"
         },
-        "responseDividers": {
-          "description": "Whether to show the response dividers. If present, will override the response dividers setting in the uiConfig.",
-          "type": "boolean"
-        },
         "responseOrder": {
           "description": "The order of the responses. Defaults to 'fixed'.",
           "enum": [
@@ -2324,6 +2320,10 @@
         "windowEventDebounceTime": {
           "description": "Debounce time in milliseconds for automatically tracked window events. If present, will override the window event debounce time setting in the uiConfig.",
           "type": "number"
+        },
+        "withDivider": {
+          "description": "Whether to show the response dividers. If present, will override the response dividers setting in the uiConfig.",
+          "type": "boolean"
         },
         "withProgressBar": {
           "description": "Controls whether the progress bar is rendered. If present, will override the progress bar setting in the uiConfig.",
@@ -3158,10 +3158,6 @@
           "description": "Desired fps for recording screen. If possible, this value will be used, but if it's not possible, the user agent will use the closest possible match.",
           "type": "number"
         },
-        "responseDividers": {
-          "description": "Whether to show the response dividers. Defaults to false.",
-          "type": "boolean"
-        },
         "showTitle": {
           "description": "Controls whether the title should be hidden in the study.",
           "type": "boolean"
@@ -3197,6 +3193,10 @@
         "windowEventDebounceTime": {
           "description": "Debounce time in milliseconds for automatically tracked window events. Defaults to 100. E.g 100 here means 1000ms / 100ms = 10 times a second, 200 here means 1000ms / 200ms = 5 times per second",
           "type": "number"
+        },
+        "withDivider": {
+          "description": "Whether to show the response dividers. Defaults to false.",
+          "type": "boolean"
         },
         "withProgressBar": {
           "description": "Controls whether the progress bar is rendered in the study.",
@@ -3316,10 +3316,6 @@
           },
           "type": "array"
         },
-        "responseDividers": {
-          "description": "Whether to show the response dividers. If present, will override the response dividers setting in the uiConfig.",
-          "type": "boolean"
-        },
         "responseOrder": {
           "description": "The order of the responses. Defaults to 'fixed'.",
           "enum": [
@@ -3362,6 +3358,10 @@
         },
         "withActions": {
           "description": "Whether to include vega actions. Defaults to true.",
+          "type": "boolean"
+        },
+        "withDivider": {
+          "description": "Whether to show the response dividers. If present, will override the response dividers setting in the uiConfig.",
           "type": "boolean"
         },
         "withProgressBar": {
@@ -3471,10 +3471,6 @@
           },
           "type": "array"
         },
-        "responseDividers": {
-          "description": "Whether to show the response dividers. If present, will override the response dividers setting in the uiConfig.",
-          "type": "boolean"
-        },
         "responseOrder": {
           "description": "The order of the responses. Defaults to 'fixed'.",
           "enum": [
@@ -3517,6 +3513,10 @@
         },
         "withActions": {
           "description": "Whether to include vega actions. Defaults to true.",
+          "type": "boolean"
+        },
+        "withDivider": {
+          "description": "Whether to show the response dividers. If present, will override the response dividers setting in the uiConfig.",
           "type": "boolean"
         },
         "withProgressBar": {
@@ -3630,10 +3630,6 @@
           },
           "type": "array"
         },
-        "responseDividers": {
-          "description": "Whether to show the response dividers. If present, will override the response dividers setting in the uiConfig.",
-          "type": "boolean"
-        },
         "responseOrder": {
           "description": "The order of the responses. Defaults to 'fixed'.",
           "enum": [
@@ -3673,6 +3669,10 @@
         "windowEventDebounceTime": {
           "description": "Debounce time in milliseconds for automatically tracked window events. If present, will override the window event debounce time setting in the uiConfig.",
           "type": "number"
+        },
+        "withDivider": {
+          "description": "Whether to show the response dividers. If present, will override the response dividers setting in the uiConfig.",
+          "type": "boolean"
         },
         "withProgressBar": {
           "description": "Controls whether the progress bar is rendered. If present, will override the progress bar setting in the uiConfig.",
@@ -3790,10 +3790,6 @@
           },
           "type": "array"
         },
-        "responseDividers": {
-          "description": "Whether to show the response dividers. If present, will override the response dividers setting in the uiConfig.",
-          "type": "boolean"
-        },
         "responseOrder": {
           "description": "The order of the responses. Defaults to 'fixed'.",
           "enum": [
@@ -3833,6 +3829,10 @@
         "windowEventDebounceTime": {
           "description": "Debounce time in milliseconds for automatically tracked window events. If present, will override the window event debounce time setting in the uiConfig.",
           "type": "number"
+        },
+        "withDivider": {
+          "description": "Whether to show the response dividers. If present, will override the response dividers setting in the uiConfig.",
+          "type": "boolean"
         },
         "withProgressBar": {
           "description": "Controls whether the progress bar is rendered. If present, will override the progress bar setting in the uiConfig.",
