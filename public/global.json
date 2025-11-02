@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.3.1/src/parser/GlobalConfigSchema.json",
   "configsList": [
     "tutorial",
-    "color-palette-study",
+    "tutorial-replication",
     "demo-html",
     "demo-html-input",
     "demo-screen-recording",
@@ -31,35 +31,32 @@
     "library-calvi",
     "library-color-blindness",
     "library-demographics",
+    "library-graph-literacy-scale",
     "library-mic-check",
-    "library-screen-recording",
     "library-mini-vlat",
     "library-nasa-tlx",
     "library-previs",
     "library-quis",
     "library-sam",
+    "library-screen-recording",
     "library-smeq",
     "library-sus",
-    "library-vlat",
-    "library-adaptive-vlat",
-    "library-graph-literacy-scale",
     "library-virtual-chinrest",
+    "library-vlat",
     "test-audio",
     "test-library",
     "test-likert-matrix",
     "test-parser-errors",
     "test-randomization",
     "test-skip-logic",
-    "test-step-logic",
-    "aireplicate-vibe-exp1",
-    "aireplicate-vibe-exp3"
+    "test-step-logic"
   ],
   "configs": {
     "tutorial": {
       "path": "tutorial/config.json"
     },
-    "color-palette-study": {
-      "path": "color-palette-study/config.json"
+    "tutorial-replication": {
+      "path": "tutorial/replication-config.json"
     },
     "demo-video-slider": {
       "path": "demo-video-slider/config.json"
@@ -148,12 +145,12 @@
       "path": "library-demographics/config.json",
       "test": true
     },
-    "library-mic-check": {
-      "path": "library-mic-check/config.json",
+    "library-graph-literacy-scale": {
+      "path": "library-graph-literacy-scale/config.json",
       "test": true
     },
-    "library-screen-recording": {
-      "path": "library-screen-recording/config.json",
+    "library-mic-check": {
+      "path": "library-mic-check/config.json",
       "test": true
     },
     "library-mini-vlat": {
@@ -176,6 +173,10 @@
       "path": "library-sam/config.json",
       "test": true
     },
+    "library-screen-recording": {
+      "path": "library-screen-recording/config.json",
+      "test": true
+    },
     "library-smeq": {
       "path": "library-smeq/config.json",
       "test": true
@@ -186,10 +187,6 @@
     },
     "library-vlat": {
       "path": "library-vlat/config.json",
-      "test": true
-    },
-    "library-graph-literacy-scale": {
-      "path": "library-graph-literacy-scale/config.json",
       "test": true
     },
     "test-audio": {
@@ -226,12 +223,6 @@
     "example-VLAT-adaptive": {
       "path": "example-VLAT-adaptive/config.json",
       "test": true
-    },
-    "aireplicate-vibe-exp1": {
-      "path": "aireplicate-vibe-exp1/config.json"
-    },
-    "aireplicate-vibe-exp3": {
-      "path": "aireplicate-vibe-exp3/config.json"
     }
   }
 }
