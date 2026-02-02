@@ -1,0 +1,5402 @@
+{
+  "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.2.0/src/parser/StudyConfigSchema.json",
+  "studyMetadata": {
+    "title": "Color Palette Comparison Study",
+    "version": "pilot",
+    "authors": [
+      ""
+    ],
+    "date": "2025-10-16",
+    "description": "An interactive study for comparing color palettes using visualizations. Participants select a color from a palette, choose an alternative, and rate their preference between the original and modified palettes.",
+    "organizations": [
+      ""
+    ]
+  },
+  "uiConfig": {
+    "contactEmail": "contact@revisit.dev",
+    "logoPath": "revisitAssets/revisitLogoSquare.svg",
+    "withProgressBar": true,
+    "autoDownloadStudy": false,
+    "withSidebar": false
+  },
+  "baseComponents": {
+    "colorTrial": {
+      "type": "react-component",
+      "path": "color-palette-study/assets/ColorPaletteComparison.tsx",
+      "nextButtonLocation": "belowStimulus",
+      "response": [
+        {
+          "id": "paletteResponse",
+          "prompt": "Color palette comparison data",
+          "location": "sidebar",
+          "type": "reactive"
+        }
+      ]
+    }
+  },
+  "components": {
+    "introduction": {
+      "type": "markdown",
+      "path": "color-palette-study/assets/introduction.md",
+      "response": []
+    },
+    "completion": {
+      "type": "markdown",
+      "path": "color-palette-study/assets/completion.md",
+      "response": []
+    },
+    "comp_p1_i0_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p1_i0_a0 (palette 1, idx 0, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 0,
+        "altIndex": 0,
+        "trialKey": "p1_i0_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "1",
+        "originalPalette": [
+          "#58b5e1",
+          "#41d26b",
+          "#996f31"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#46ebdc",
+        "trialKey": "p1_i0_a0"
+      }
+    },
+    "comp_p1_i0_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p1_i0_a1 (palette 1, idx 0, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 0,
+        "altIndex": 1,
+        "trialKey": "p1_i0_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "1",
+        "originalPalette": [
+          "#58b5e1",
+          "#41d26b",
+          "#996f31"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#cddb9b",
+        "trialKey": "p1_i0_a1"
+      }
+    },
+    "comp_p1_i1_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p1_i1_a0 (palette 1, idx 1, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 1,
+        "altIndex": 0,
+        "trialKey": "p1_i1_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "1",
+        "originalPalette": [
+          "#58b5e1",
+          "#41d26b",
+          "#996f31"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#639f50",
+        "trialKey": "p1_i1_a0"
+      }
+    },
+    "comp_p1_i1_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p1_i1_a1 (palette 1, idx 1, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 1,
+        "altIndex": 1,
+        "trialKey": "p1_i1_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "1",
+        "originalPalette": [
+          "#58b5e1",
+          "#41d26b",
+          "#996f31"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#78c99c",
+        "trialKey": "p1_i1_a1"
+      }
+    },
+    "comp_p1_i2_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p1_i2_a0 (palette 1, idx 2, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 2,
+        "altIndex": 0,
+        "trialKey": "p1_i2_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "1",
+        "originalPalette": [
+          "#58b5e1",
+          "#41d26b",
+          "#996f31"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#0b522e",
+        "trialKey": "p1_i2_a0"
+      }
+    },
+    "comp_p1_i2_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p1_i2_a1 (palette 1, idx 2, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 2,
+        "altIndex": 1,
+        "trialKey": "p1_i2_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "1",
+        "originalPalette": [
+          "#58b5e1",
+          "#41d26b",
+          "#996f31"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#1d686e",
+        "trialKey": "p1_i2_a1"
+      }
+    },
+    "comp_p2_i0_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p2_i0_a0 (palette 2, idx 0, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 0,
+        "altIndex": 0,
+        "trialKey": "p2_i0_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "2",
+        "originalPalette": [
+          "#208eb7",
+          "#1ceaf9",
+          "#214d4e"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#369094",
+        "trialKey": "p2_i0_a0"
+      }
+    },
+    "comp_p2_i0_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p2_i0_a1 (palette 2, idx 0, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 0,
+        "altIndex": 1,
+        "trialKey": "p2_i0_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "2",
+        "originalPalette": [
+          "#208eb7",
+          "#1ceaf9",
+          "#214d4e"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#54b2fc",
+        "trialKey": "p2_i0_a1"
+      }
+    },
+    "comp_p2_i1_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p2_i1_a0 (palette 2, idx 1, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 1,
+        "altIndex": 0,
+        "trialKey": "p2_i1_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "2",
+        "originalPalette": [
+          "#208eb7",
+          "#1ceaf9",
+          "#214d4e"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#60e9dc",
+        "trialKey": "p2_i1_a0"
+      }
+    },
+    "comp_p2_i1_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p2_i1_a1 (palette 2, idx 1, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 1,
+        "altIndex": 1,
+        "trialKey": "p2_i1_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "2",
+        "originalPalette": [
+          "#208eb7",
+          "#1ceaf9",
+          "#214d4e"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#77d1fd",
+        "trialKey": "p2_i1_a1"
+      }
+    },
+    "comp_p2_i2_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p2_i2_a0 (palette 2, idx 2, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 2,
+        "altIndex": 0,
+        "trialKey": "p2_i2_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "2",
+        "originalPalette": [
+          "#208eb7",
+          "#1ceaf9",
+          "#214d4e"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#104b6d",
+        "trialKey": "p2_i2_a0"
+      }
+    },
+    "comp_p2_i2_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p2_i2_a1 (palette 2, idx 2, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 2,
+        "altIndex": 1,
+        "trialKey": "p2_i2_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "2",
+        "originalPalette": [
+          "#208eb7",
+          "#1ceaf9",
+          "#214d4e"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#1c4c5e",
+        "trialKey": "p2_i2_a1"
+      }
+    },
+    "comp_p3_i0_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p3_i0_a0 (palette 3, idx 0, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 0,
+        "altIndex": 0,
+        "trialKey": "p3_i0_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "3",
+        "originalPalette": [
+          "#069668",
+          "#7fdb83",
+          "#214d4e"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#4fbbbc",
+        "trialKey": "p3_i0_a0"
+      }
+    },
+    "comp_p3_i0_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p3_i0_a1 (palette 3, idx 0, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 0,
+        "altIndex": 1,
+        "trialKey": "p3_i0_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "3",
+        "originalPalette": [
+          "#069668",
+          "#7fdb83",
+          "#214d4e"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#2dadb8",
+        "trialKey": "p3_i0_a1"
+      }
+    },
+    "comp_p3_i1_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p3_i1_a0 (palette 3, idx 1, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 1,
+        "altIndex": 0,
+        "trialKey": "p3_i1_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "3",
+        "originalPalette": [
+          "#069668",
+          "#7fdb83",
+          "#214d4e"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#83e3f0",
+        "trialKey": "p3_i1_a0"
+      }
+    },
+    "comp_p3_i1_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p3_i1_a1 (palette 3, idx 1, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 1,
+        "altIndex": 1,
+        "trialKey": "p3_i1_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "3",
+        "originalPalette": [
+          "#069668",
+          "#7fdb83",
+          "#214d4e"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#a2e0dd",
+        "trialKey": "p3_i1_a1"
+      }
+    },
+    "comp_p3_i2_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p3_i2_a0 (palette 3, idx 2, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 2,
+        "altIndex": 0,
+        "trialKey": "p3_i2_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "3",
+        "originalPalette": [
+          "#069668",
+          "#7fdb83",
+          "#214d4e"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#0b522e",
+        "trialKey": "p3_i2_a0"
+      }
+    },
+    "comp_p3_i2_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p3_i2_a1 (palette 3, idx 2, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 2,
+        "altIndex": 1,
+        "trialKey": "p3_i2_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "3",
+        "originalPalette": [
+          "#069668",
+          "#7fdb83",
+          "#214d4e"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#194f46",
+        "trialKey": "p3_i2_a1"
+      }
+    },
+    "comp_p4_i0_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p4_i0_a0 (palette 4, idx 0, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 0,
+        "altIndex": 0,
+        "trialKey": "p4_i0_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "4",
+        "originalPalette": [
+          "#21f0b6",
+          "#c345a3",
+          "#0a60a8"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#aea2eb",
+        "trialKey": "p4_i0_a0"
+      }
+    },
+    "comp_p4_i0_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p4_i0_a1 (palette 4, idx 0, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 0,
+        "altIndex": 1,
+        "trialKey": "p4_i0_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "4",
+        "originalPalette": [
+          "#21f0b6",
+          "#c345a3",
+          "#0a60a8"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#88aee1",
+        "trialKey": "p4_i0_a1"
+      }
+    },
+    "comp_p4_i1_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p4_i1_a0 (palette 4, idx 1, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 1,
+        "altIndex": 0,
+        "trialKey": "p4_i1_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "4",
+        "originalPalette": [
+          "#21f0b6",
+          "#c345a3",
+          "#0a60a8"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#56a8ca",
+        "trialKey": "p4_i1_a0"
+      }
+    },
+    "comp_p4_i1_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p4_i1_a1 (palette 4, idx 1, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 1,
+        "altIndex": 1,
+        "trialKey": "p4_i1_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "4",
+        "originalPalette": [
+          "#21f0b6",
+          "#c345a3",
+          "#0a60a8"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#6bb8b3",
+        "trialKey": "p4_i1_a1"
+      }
+    },
+    "comp_p4_i2_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p4_i2_a0 (palette 4, idx 2, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 2,
+        "altIndex": 0,
+        "trialKey": "p4_i2_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "4",
+        "originalPalette": [
+          "#21f0b6",
+          "#c345a3",
+          "#0a60a8"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#4fa9c1",
+        "trialKey": "p4_i2_a0"
+      }
+    },
+    "comp_p4_i2_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p4_i2_a1 (palette 4, idx 2, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 2,
+        "altIndex": 1,
+        "trialKey": "p4_i2_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "4",
+        "originalPalette": [
+          "#21f0b6",
+          "#c345a3",
+          "#0a60a8"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#453cc5",
+        "trialKey": "p4_i2_a1"
+      }
+    },
+    "comp_p5_i0_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p5_i0_a0 (palette 5, idx 0, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 0,
+        "altIndex": 0,
+        "trialKey": "p5_i0_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "5",
+        "originalPalette": [
+          "#32964d",
+          "#93e0f0",
+          "#20502e"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#1fc468",
+        "trialKey": "p5_i0_a0"
+      }
+    },
+    "comp_p5_i0_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p5_i0_a1 (palette 5, idx 0, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 0,
+        "altIndex": 1,
+        "trialKey": "p5_i0_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "5",
+        "originalPalette": [
+          "#32964d",
+          "#93e0f0",
+          "#20502e"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#16d0ae",
+        "trialKey": "p5_i0_a1"
+      }
+    },
+    "comp_p5_i1_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p5_i1_a0 (palette 5, idx 1, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 1,
+        "altIndex": 0,
+        "trialKey": "p5_i1_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "5",
+        "originalPalette": [
+          "#32964d",
+          "#93e0f0",
+          "#20502e"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#9ae871",
+        "trialKey": "p5_i1_a0"
+      }
+    },
+    "comp_p5_i1_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p5_i1_a1 (palette 5, idx 1, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 1,
+        "altIndex": 1,
+        "trialKey": "p5_i1_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "5",
+        "originalPalette": [
+          "#32964d",
+          "#93e0f0",
+          "#20502e"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#6becad",
+        "trialKey": "p5_i1_a1"
+      }
+    },
+    "comp_p5_i2_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p5_i2_a0 (palette 5, idx 2, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 2,
+        "altIndex": 0,
+        "trialKey": "p5_i2_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "5",
+        "originalPalette": [
+          "#32964d",
+          "#93e0f0",
+          "#20502e"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#0b522e",
+        "trialKey": "p5_i2_a0"
+      }
+    },
+    "comp_p5_i2_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p5_i2_a1 (palette 5, idx 2, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 2,
+        "altIndex": 1,
+        "trialKey": "p5_i2_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "5",
+        "originalPalette": [
+          "#32964d",
+          "#93e0f0",
+          "#20502e"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#0e503e",
+        "trialKey": "p5_i2_a1"
+      }
+    },
+    "comp_p6_i0_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p6_i0_a0 (palette 6, idx 0, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 0,
+        "altIndex": 0,
+        "trialKey": "p6_i0_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "6",
+        "originalPalette": [
+          "#069668",
+          "#7ce5e6",
+          "#155126"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#44b25c",
+        "trialKey": "p6_i0_a0"
+      }
+    },
+    "comp_p6_i0_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p6_i0_a1 (palette 6, idx 0, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 0,
+        "altIndex": 1,
+        "trialKey": "p6_i0_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "6",
+        "originalPalette": [
+          "#069668",
+          "#7ce5e6",
+          "#155126"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#56b15c",
+        "trialKey": "p6_i0_a1"
+      }
+    },
+    "comp_p6_i1_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p6_i1_a0 (palette 6, idx 1, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 1,
+        "altIndex": 0,
+        "trialKey": "p6_i1_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "6",
+        "originalPalette": [
+          "#069668",
+          "#7ce5e6",
+          "#155126"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#23dbe1",
+        "trialKey": "p6_i1_a0"
+      }
+    },
+    "comp_p6_i1_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p6_i1_a1 (palette 6, idx 1, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 1,
+        "altIndex": 1,
+        "trialKey": "p6_i1_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "6",
+        "originalPalette": [
+          "#069668",
+          "#7ce5e6",
+          "#155126"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#93e6b7",
+        "trialKey": "p6_i1_a1"
+      }
+    },
+    "comp_p6_i2_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p6_i2_a0 (palette 6, idx 2, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 2,
+        "altIndex": 0,
+        "trialKey": "p6_i2_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "6",
+        "originalPalette": [
+          "#069668",
+          "#7ce5e6",
+          "#155126"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#0e503e",
+        "trialKey": "p6_i2_a0"
+      }
+    },
+    "comp_p6_i2_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p6_i2_a1 (palette 6, idx 2, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 2,
+        "altIndex": 1,
+        "trialKey": "p6_i2_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "6",
+        "originalPalette": [
+          "#069668",
+          "#7ce5e6",
+          "#155126"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#194f46",
+        "trialKey": "p6_i2_a1"
+      }
+    },
+    "comp_p7_i0_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p7_i0_a0 (palette 7, idx 0, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 0,
+        "altIndex": 0,
+        "trialKey": "p7_i0_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "7",
+        "originalPalette": [
+          "#aee39a",
+          "#bc9495",
+          "#387472"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#46ebdc",
+        "trialKey": "p7_i0_a0"
+      }
+    },
+    "comp_p7_i0_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p7_i0_a1 (palette 7, idx 0, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 0,
+        "altIndex": 1,
+        "trialKey": "p7_i0_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "7",
+        "originalPalette": [
+          "#aee39a",
+          "#bc9495",
+          "#387472"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#a2e0dd",
+        "trialKey": "p7_i0_a1"
+      }
+    },
+    "comp_p7_i1_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p7_i1_a0 (palette 7, idx 1, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 1,
+        "altIndex": 0,
+        "trialKey": "p7_i1_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "7",
+        "originalPalette": [
+          "#aee39a",
+          "#bc9495",
+          "#387472"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#41bbc5",
+        "trialKey": "p7_i1_a0"
+      }
+    },
+    "comp_p7_i1_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p7_i1_a1 (palette 7, idx 1, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 1,
+        "altIndex": 1,
+        "trialKey": "p7_i1_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "7",
+        "originalPalette": [
+          "#aee39a",
+          "#bc9495",
+          "#387472"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#57b9c5",
+        "trialKey": "p7_i1_a1"
+      }
+    },
+    "comp_p7_i2_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p7_i2_a0 (palette 7, idx 2, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 2,
+        "altIndex": 0,
+        "trialKey": "p7_i2_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "7",
+        "originalPalette": [
+          "#aee39a",
+          "#bc9495",
+          "#387472"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#923124",
+        "trialKey": "p7_i2_a0"
+      }
+    },
+    "comp_p7_i2_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p7_i2_a1 (palette 7, idx 2, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 2,
+        "altIndex": 1,
+        "trialKey": "p7_i2_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "7",
+        "originalPalette": [
+          "#aee39a",
+          "#bc9495",
+          "#387472"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#d11f0b",
+        "trialKey": "p7_i2_a1"
+      }
+    },
+    "comp_p8_i0_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p8_i0_a0 (palette 8, idx 0, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 0,
+        "altIndex": 0,
+        "trialKey": "p8_i0_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "8",
+        "originalPalette": [
+          "#69ef7b",
+          "#496e8b",
+          "#aae3a4"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#007961",
+        "trialKey": "p8_i0_a0"
+      }
+    },
+    "comp_p8_i0_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p8_i0_a1 (palette 8, idx 0, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 0,
+        "altIndex": 1,
+        "trialKey": "p8_i0_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "8",
+        "originalPalette": [
+          "#69ef7b",
+          "#496e8b",
+          "#aae3a4"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#02531d",
+        "trialKey": "p8_i0_a1"
+      }
+    },
+    "comp_p8_i1_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p8_i1_a0 (palette 8, idx 1, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 1,
+        "altIndex": 0,
+        "trialKey": "p8_i1_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "8",
+        "originalPalette": [
+          "#69ef7b",
+          "#496e8b",
+          "#aae3a4"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#20502e",
+        "trialKey": "p8_i1_a0"
+      }
+    },
+    "comp_p8_i1_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p8_i1_a1 (palette 8, idx 1, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 1,
+        "altIndex": 1,
+        "trialKey": "p8_i1_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "8",
+        "originalPalette": [
+          "#69ef7b",
+          "#496e8b",
+          "#aae3a4"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#2a8476",
+        "trialKey": "p8_i1_a1"
+      }
+    },
+    "comp_p8_i2_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p8_i2_a0 (palette 8, idx 2, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 2,
+        "altIndex": 0,
+        "trialKey": "p8_i2_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "8",
+        "originalPalette": [
+          "#69ef7b",
+          "#496e8b",
+          "#aae3a4"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#56cac1",
+        "trialKey": "p8_i2_a0"
+      }
+    },
+    "comp_p8_i2_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p8_i2_a1 (palette 8, idx 2, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 2,
+        "altIndex": 1,
+        "trialKey": "p8_i2_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "8",
+        "originalPalette": [
+          "#69ef7b",
+          "#496e8b",
+          "#aae3a4"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#2bbcce",
+        "trialKey": "p8_i2_a1"
+      }
+    },
+    "comp_p9_i0_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p9_i0_a0 (palette 9, idx 0, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 0,
+        "altIndex": 0,
+        "trialKey": "p9_i0_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "9",
+        "originalPalette": [
+          "#72e5ef",
+          "#1b511d",
+          "#369094"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#15dec5",
+        "trialKey": "p9_i0_a0"
+      }
+    },
+    "comp_p9_i0_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p9_i0_a1 (palette 9, idx 0, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 0,
+        "altIndex": 1,
+        "trialKey": "p9_i0_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "9",
+        "originalPalette": [
+          "#72e5ef",
+          "#1b511d",
+          "#369094"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#85d2e1",
+        "trialKey": "p9_i0_a1"
+      }
+    },
+    "comp_p9_i1_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p9_i1_a0 (palette 9, idx 1, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 1,
+        "altIndex": 0,
+        "trialKey": "p9_i1_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "9",
+        "originalPalette": [
+          "#72e5ef",
+          "#1b511d",
+          "#369094"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#0a4f4e",
+        "trialKey": "p9_i1_a0"
+      }
+    },
+    "comp_p9_i1_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p9_i1_a1 (palette 9, idx 1, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 1,
+        "altIndex": 1,
+        "trialKey": "p9_i1_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "9",
+        "originalPalette": [
+          "#72e5ef",
+          "#1b511d",
+          "#369094"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#194f46",
+        "trialKey": "p9_i1_a1"
+      }
+    },
+    "comp_p9_i2_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p9_i2_a0 (palette 9, idx 2, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 2,
+        "altIndex": 0,
+        "trialKey": "p9_i2_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "9",
+        "originalPalette": [
+          "#72e5ef",
+          "#1b511d",
+          "#369094"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#21a645",
+        "trialKey": "p9_i2_a0"
+      }
+    },
+    "comp_p9_i2_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p9_i2_a1 (palette 9, idx 2, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 2,
+        "altIndex": 1,
+        "trialKey": "p9_i2_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "9",
+        "originalPalette": [
+          "#72e5ef",
+          "#1b511d",
+          "#369094"
+        ],
+        "weights": {
+          "ciede2000": 0.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#36c272",
+        "trialKey": "p9_i2_a1"
+      }
+    },
+    "comp_p10_i0_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p10_i0_a0 (palette 10, idx 0, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 0,
+        "altIndex": 0,
+        "trialKey": "p10_i0_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "10",
+        "originalPalette": [
+          "#a1def0",
+          "#683a38",
+          "#1eefc9"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#399283",
+        "trialKey": "p10_i0_a0"
+      }
+    },
+    "comp_p10_i0_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p10_i0_a1 (palette 10, idx 0, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 0,
+        "altIndex": 1,
+        "trialKey": "p10_i0_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "10",
+        "originalPalette": [
+          "#a1def0",
+          "#683a38",
+          "#1eefc9"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#369094",
+        "trialKey": "p10_i0_a1"
+      }
+    },
+    "comp_p10_i1_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p10_i1_a0 (palette 10, idx 1, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 1,
+        "altIndex": 0,
+        "trialKey": "p10_i1_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "10",
+        "originalPalette": [
+          "#a1def0",
+          "#683a38",
+          "#1eefc9"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#1d866d",
+        "trialKey": "p10_i1_a0"
+      }
+    },
+    "comp_p10_i1_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p10_i1_a1 (palette 10, idx 1, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 1,
+        "altIndex": 1,
+        "trialKey": "p10_i1_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "10",
+        "originalPalette": [
+          "#a1def0",
+          "#683a38",
+          "#1eefc9"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#42908c",
+        "trialKey": "p10_i1_a1"
+      }
+    },
+    "comp_p10_i2_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p10_i2_a0 (palette 10, idx 2, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 2,
+        "altIndex": 0,
+        "trialKey": "p10_i2_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "10",
+        "originalPalette": [
+          "#a1def0",
+          "#683a38",
+          "#1eefc9"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#38e278",
+        "trialKey": "p10_i2_a0"
+      }
+    },
+    "comp_p10_i2_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p10_i2_a1 (palette 10, idx 2, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 2,
+        "altIndex": 1,
+        "trialKey": "p10_i2_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "10",
+        "originalPalette": [
+          "#a1def0",
+          "#683a38",
+          "#1eefc9"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#9ee786",
+        "trialKey": "p10_i2_a1"
+      }
+    },
+    "comp_p11_i0_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p11_i0_a0 (palette 11, idx 0, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 0,
+        "altIndex": 0,
+        "trialKey": "p11_i0_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "11",
+        "originalPalette": [
+          "#58b5e1",
+          "#255026",
+          "#8fda59"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#30972e",
+        "trialKey": "p11_i0_a0"
+      }
+    },
+    "comp_p11_i0_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p11_i0_a1 (palette 11, idx 0, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 0,
+        "altIndex": 1,
+        "trialKey": "p11_i0_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "11",
+        "originalPalette": [
+          "#58b5e1",
+          "#255026",
+          "#8fda59"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#05957a",
+        "trialKey": "p11_i0_a1"
+      }
+    },
+    "comp_p11_i1_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p11_i1_a0 (palette 11, idx 1, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 1,
+        "altIndex": 0,
+        "trialKey": "p11_i1_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "11",
+        "originalPalette": [
+          "#58b5e1",
+          "#255026",
+          "#8fda59"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#0a4f4e",
+        "trialKey": "p11_i1_a0"
+      }
+    },
+    "comp_p11_i1_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p11_i1_a1 (palette 11, idx 1, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 1,
+        "altIndex": 1,
+        "trialKey": "p11_i1_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "11",
+        "originalPalette": [
+          "#58b5e1",
+          "#255026",
+          "#8fda59"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#338821",
+        "trialKey": "p11_i1_a1"
+      }
+    },
+    "comp_p11_i2_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p11_i2_a0 (palette 11, idx 2, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 2,
+        "altIndex": 0,
+        "trialKey": "p11_i2_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "11",
+        "originalPalette": [
+          "#58b5e1",
+          "#255026",
+          "#8fda59"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#1be19f",
+        "trialKey": "p11_i2_a0"
+      }
+    },
+    "comp_p11_i2_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p11_i2_a1 (palette 11, idx 2, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 2,
+        "altIndex": 1,
+        "trialKey": "p11_i2_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "11",
+        "originalPalette": [
+          "#58b5e1",
+          "#255026",
+          "#8fda59"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#8be8ad",
+        "trialKey": "p11_i2_a1"
+      }
+    },
+    "comp_p12_i0_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p12_i0_a0 (palette 12, idx 0, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 0,
+        "altIndex": 0,
+        "trialKey": "p12_i0_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "12",
+        "originalPalette": [
+          "#0cc0aa",
+          "#075c62",
+          "#aedbf0"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#3d9f98",
+        "trialKey": "p12_i0_a0"
+      }
+    },
+    "comp_p12_i0_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p12_i0_a1 (palette 12, idx 0, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 0,
+        "altIndex": 1,
+        "trialKey": "p12_i0_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "12",
+        "originalPalette": [
+          "#0cc0aa",
+          "#075c62",
+          "#aedbf0"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#479abc",
+        "trialKey": "p12_i0_a1"
+      }
+    },
+    "comp_p12_i1_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p12_i1_a0 (palette 12, idx 1, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 1,
+        "altIndex": 0,
+        "trialKey": "p12_i1_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "12",
+        "originalPalette": [
+          "#0cc0aa",
+          "#075c62",
+          "#aedbf0"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#2d595a",
+        "trialKey": "p12_i1_a0"
+      }
+    },
+    "comp_p12_i1_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p12_i1_a1 (palette 12, idx 1, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 1,
+        "altIndex": 1,
+        "trialKey": "p12_i1_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "12",
+        "originalPalette": [
+          "#0cc0aa",
+          "#075c62",
+          "#aedbf0"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#2c7194",
+        "trialKey": "p12_i1_a1"
+      }
+    },
+    "comp_p12_i2_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p12_i2_a0 (palette 12, idx 2, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 2,
+        "altIndex": 0,
+        "trialKey": "p12_i2_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "12",
+        "originalPalette": [
+          "#0cc0aa",
+          "#075c62",
+          "#aedbf0"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#a7dcf9",
+        "trialKey": "p12_i2_a0"
+      }
+    },
+    "comp_p12_i2_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p12_i2_a1 (palette 12, idx 2, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 2,
+        "altIndex": 1,
+        "trialKey": "p12_i2_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "12",
+        "originalPalette": [
+          "#0cc0aa",
+          "#075c62",
+          "#aedbf0"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#8deb71",
+        "trialKey": "p12_i2_a1"
+      }
+    },
+    "comp_p13_i0_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p13_i0_a0 (palette 13, idx 0, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 0,
+        "altIndex": 0,
+        "trialKey": "p13_i0_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "13",
+        "originalPalette": [
+          "#68affc",
+          "#68374f",
+          "#2eece6"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#258387",
+        "trialKey": "p13_i0_a0"
+      }
+    },
+    "comp_p13_i0_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p13_i0_a1 (palette 13, idx 0, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 0,
+        "altIndex": 1,
+        "trialKey": "p13_i0_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "13",
+        "originalPalette": [
+          "#68affc",
+          "#68374f",
+          "#2eece6"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#169294",
+        "trialKey": "p13_i0_a1"
+      }
+    },
+    "comp_p13_i1_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p13_i1_a0 (palette 13, idx 1, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 1,
+        "altIndex": 0,
+        "trialKey": "p13_i1_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "13",
+        "originalPalette": [
+          "#68affc",
+          "#68374f",
+          "#2eece6"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#169294",
+        "trialKey": "p13_i1_a0"
+      }
+    },
+    "comp_p13_i1_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p13_i1_a1 (palette 13, idx 1, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 1,
+        "altIndex": 1,
+        "trialKey": "p13_i1_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "13",
+        "originalPalette": [
+          "#68affc",
+          "#68374f",
+          "#2eece6"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#0a4f4e",
+        "trialKey": "p13_i1_a1"
+      }
+    },
+    "comp_p13_i2_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p13_i2_a0 (palette 13, idx 2, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 2,
+        "altIndex": 0,
+        "trialKey": "p13_i2_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "13",
+        "originalPalette": [
+          "#68affc",
+          "#68374f",
+          "#2eece6"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#ef4cd0",
+        "trialKey": "p13_i2_a0"
+      }
+    },
+    "comp_p13_i2_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p13_i2_a1 (palette 13, idx 2, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 2,
+        "altIndex": 1,
+        "trialKey": "p13_i2_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "13",
+        "originalPalette": [
+          "#68affc",
+          "#68374f",
+          "#2eece6"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#d093f4",
+        "trialKey": "p13_i2_a1"
+      }
+    },
+    "comp_p14_i0_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p14_i0_a0 (palette 14, idx 0, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 0,
+        "altIndex": 0,
+        "trialKey": "p14_i0_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "14",
+        "originalPalette": [
+          "#4f8c9d",
+          "#90ea66",
+          "#760796"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#5979fe",
+        "trialKey": "p14_i0_a0"
+      }
+    },
+    "comp_p14_i0_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p14_i0_a1 (palette 14, idx 0, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 0,
+        "altIndex": 1,
+        "trialKey": "p14_i0_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "14",
+        "originalPalette": [
+          "#4f8c9d",
+          "#90ea66",
+          "#760796"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#37bad7",
+        "trialKey": "p14_i0_a1"
+      }
+    },
+    "comp_p14_i1_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p14_i1_a0 (palette 14, idx 1, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 1,
+        "altIndex": 0,
+        "trialKey": "p14_i1_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "14",
+        "originalPalette": [
+          "#4f8c9d",
+          "#90ea66",
+          "#760796"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#a3c9fe",
+        "trialKey": "p14_i1_a0"
+      }
+    },
+    "comp_p14_i1_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p14_i1_a1 (palette 14, idx 1, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 1,
+        "altIndex": 1,
+        "trialKey": "p14_i1_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "14",
+        "originalPalette": [
+          "#4f8c9d",
+          "#90ea66",
+          "#760796"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#786eb3",
+        "trialKey": "p14_i1_a1"
+      }
+    },
+    "comp_p14_i2_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p14_i2_a0 (palette 14, idx 2, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 2,
+        "altIndex": 0,
+        "trialKey": "p14_i2_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "14",
+        "originalPalette": [
+          "#4f8c9d",
+          "#90ea66",
+          "#760796"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#194f46",
+        "trialKey": "p14_i2_a0"
+      }
+    },
+    "comp_p14_i2_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p14_i2_a1 (palette 14, idx 2, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 2,
+        "altIndex": 1,
+        "trialKey": "p14_i2_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "14",
+        "originalPalette": [
+          "#4f8c9d",
+          "#90ea66",
+          "#760796"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#155126",
+        "trialKey": "p14_i2_a1"
+      }
+    },
+    "comp_p15_i0_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p15_i0_a0 (palette 15, idx 0, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 0,
+        "altIndex": 0,
+        "trialKey": "p15_i0_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "15",
+        "originalPalette": [
+          "#a1def0",
+          "#1e6c3c",
+          "#2fddce"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#208eb7",
+        "trialKey": "p15_i0_a0"
+      }
+    },
+    "comp_p15_i0_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p15_i0_a1 (palette 15, idx 0, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 0,
+        "altIndex": 1,
+        "trialKey": "p15_i0_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "15",
+        "originalPalette": [
+          "#a1def0",
+          "#1e6c3c",
+          "#2fddce"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#479abc",
+        "trialKey": "p15_i0_a1"
+      }
+    },
+    "comp_p15_i1_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p15_i1_a0 (palette 15, idx 1, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 1,
+        "altIndex": 0,
+        "trialKey": "p15_i1_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "15",
+        "originalPalette": [
+          "#a1def0",
+          "#1e6c3c",
+          "#2fddce"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#156b55",
+        "trialKey": "p15_i1_a0"
+      }
+    },
+    "comp_p15_i1_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p15_i1_a1 (palette 15, idx 1, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 1,
+        "altIndex": 1,
+        "trialKey": "p15_i1_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "15",
+        "originalPalette": [
+          "#a1def0",
+          "#1e6c3c",
+          "#2fddce"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#258387",
+        "trialKey": "p15_i1_a1"
+      }
+    },
+    "comp_p15_i2_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p15_i2_a0 (palette 15, idx 2, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 2,
+        "altIndex": 0,
+        "trialKey": "p15_i2_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "15",
+        "originalPalette": [
+          "#a1def0",
+          "#1e6c3c",
+          "#2fddce"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#38f0ac",
+        "trialKey": "p15_i2_a0"
+      }
+    },
+    "comp_p15_i2_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p15_i2_a1 (palette 15, idx 2, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 2,
+        "altIndex": 1,
+        "trialKey": "p15_i2_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "15",
+        "originalPalette": [
+          "#a1def0",
+          "#1e6c3c",
+          "#2fddce"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#2db45c",
+        "trialKey": "p15_i2_a1"
+      }
+    },
+    "comp_p16_i0_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p16_i0_a0 (palette 16, idx 0, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 0,
+        "altIndex": 0,
+        "trialKey": "p16_i0_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "16",
+        "originalPalette": [
+          "#b4ddd4",
+          "#832522",
+          "#4dc172"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#33783f",
+        "trialKey": "p16_i0_a0"
+      }
+    },
+    "comp_p16_i0_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p16_i0_a1 (palette 16, idx 0, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 0,
+        "altIndex": 1,
+        "trialKey": "p16_i0_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "16",
+        "originalPalette": [
+          "#b4ddd4",
+          "#832522",
+          "#4dc172"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#18786a",
+        "trialKey": "p16_i0_a1"
+      }
+    },
+    "comp_p16_i1_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p16_i1_a0 (palette 16, idx 1, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 1,
+        "altIndex": 0,
+        "trialKey": "p16_i1_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "16",
+        "originalPalette": [
+          "#b4ddd4",
+          "#832522",
+          "#4dc172"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#2d7848",
+        "trialKey": "p16_i1_a0"
+      }
+    },
+    "comp_p16_i1_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p16_i1_a1 (palette 16, idx 1, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 1,
+        "altIndex": 1,
+        "trialKey": "p16_i1_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "16",
+        "originalPalette": [
+          "#b4ddd4",
+          "#832522",
+          "#4dc172"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#155126",
+        "trialKey": "p16_i1_a1"
+      }
+    },
+    "comp_p16_i2_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p16_i2_a0 (palette 16, idx 2, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 2,
+        "altIndex": 0,
+        "trialKey": "p16_i2_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "16",
+        "originalPalette": [
+          "#b4ddd4",
+          "#832522",
+          "#4dc172"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#a9c358",
+        "trialKey": "p16_i2_a0"
+      }
+    },
+    "comp_p16_i2_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p16_i2_a1 (palette 16, idx 2, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 2,
+        "altIndex": 1,
+        "trialKey": "p16_i2_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "16",
+        "originalPalette": [
+          "#b4ddd4",
+          "#832522",
+          "#4dc172"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#9ae871",
+        "trialKey": "p16_i2_a1"
+      }
+    },
+    "comp_p17_i0_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p17_i0_a0 (palette 17, idx 0, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 0,
+        "altIndex": 0,
+        "trialKey": "p17_i0_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "17",
+        "originalPalette": [
+          "#208eb7",
+          "#84eb86",
+          "#4443b4"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#4a8bae",
+        "trialKey": "p17_i0_a0"
+      }
+    },
+    "comp_p17_i0_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p17_i0_a1 (palette 17, idx 0, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 0,
+        "altIndex": 1,
+        "trialKey": "p17_i0_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "17",
+        "originalPalette": [
+          "#208eb7",
+          "#84eb86",
+          "#4443b4"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#35afa6",
+        "trialKey": "p17_i0_a1"
+      }
+    },
+    "comp_p17_i1_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p17_i1_a0 (palette 17, idx 1, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 1,
+        "altIndex": 0,
+        "trialKey": "p17_i1_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "17",
+        "originalPalette": [
+          "#208eb7",
+          "#84eb86",
+          "#4443b4"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#6ae7e6",
+        "trialKey": "p17_i1_a0"
+      }
+    },
+    "comp_p17_i1_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p17_i1_a1 (palette 17, idx 1, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 1,
+        "altIndex": 1,
+        "trialKey": "p17_i1_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "17",
+        "originalPalette": [
+          "#208eb7",
+          "#84eb86",
+          "#4443b4"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#99ceeb",
+        "trialKey": "p17_i1_a1"
+      }
+    },
+    "comp_p17_i2_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p17_i2_a0 (palette 17, idx 2, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 2,
+        "altIndex": 0,
+        "trialKey": "p17_i2_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "17",
+        "originalPalette": [
+          "#208eb7",
+          "#84eb86",
+          "#4443b4"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#194f46",
+        "trialKey": "p17_i2_a0"
+      }
+    },
+    "comp_p17_i2_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p17_i2_a1 (palette 17, idx 2, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 2,
+        "altIndex": 1,
+        "trialKey": "p17_i2_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "17",
+        "originalPalette": [
+          "#208eb7",
+          "#84eb86",
+          "#4443b4"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#1b511d",
+        "trialKey": "p17_i2_a1"
+      }
+    },
+    "comp_p18_i0_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p18_i0_a0 (palette 18, idx 0, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 0,
+        "altIndex": 0,
+        "trialKey": "p18_i0_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "18",
+        "originalPalette": [
+          "#68affc",
+          "#0e503e",
+          "#7ce5e6"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#2da0a1",
+        "trialKey": "p18_i0_a0"
+      }
+    },
+    "comp_p18_i0_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p18_i0_a1 (palette 18, idx 0, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 0,
+        "altIndex": 1,
+        "trialKey": "p18_i0_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "18",
+        "originalPalette": [
+          "#68affc",
+          "#0e503e",
+          "#7ce5e6"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#509d99",
+        "trialKey": "p18_i0_a1"
+      }
+    },
+    "comp_p18_i1_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p18_i1_a0 (palette 18, idx 1, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 1,
+        "altIndex": 0,
+        "trialKey": "p18_i1_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "18",
+        "originalPalette": [
+          "#68affc",
+          "#0e503e",
+          "#7ce5e6"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#194f46",
+        "trialKey": "p18_i1_a0"
+      }
+    },
+    "comp_p18_i1_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p18_i1_a1 (palette 18, idx 1, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 1,
+        "altIndex": 1,
+        "trialKey": "p18_i1_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "18",
+        "originalPalette": [
+          "#68affc",
+          "#0e503e",
+          "#7ce5e6"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#1d7583",
+        "trialKey": "p18_i1_a1"
+      }
+    },
+    "comp_p18_i2_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p18_i2_a0 (palette 18, idx 2, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 2,
+        "altIndex": 0,
+        "trialKey": "p18_i2_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "18",
+        "originalPalette": [
+          "#68affc",
+          "#0e503e",
+          "#7ce5e6"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#62d7e1",
+        "trialKey": "p18_i2_a0"
+      }
+    },
+    "comp_p18_i2_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p18_i2_a1 (palette 18, idx 2, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "0.5",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 2,
+        "altIndex": 1,
+        "trialKey": "p18_i2_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "18",
+        "originalPalette": [
+          "#68affc",
+          "#0e503e",
+          "#7ce5e6"
+        ],
+        "weights": {
+          "ciede2000": 0.5,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#1fa198",
+        "trialKey": "p18_i2_a1"
+      }
+    },
+    "comp_p19_i0_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p19_i0_a0 (palette 19, idx 0, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 0,
+        "altIndex": 0,
+        "trialKey": "p19_i0_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "19",
+        "originalPalette": [
+          "#b4ddd4",
+          "#84241a",
+          "#51f310"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#4c852e",
+        "trialKey": "p19_i0_a0"
+      }
+    },
+    "comp_p19_i0_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p19_i0_a1 (palette 19, idx 0, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 0,
+        "altIndex": 1,
+        "trialKey": "p19_i0_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "19",
+        "originalPalette": [
+          "#b4ddd4",
+          "#84241a",
+          "#51f310"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#2f882d",
+        "trialKey": "p19_i0_a1"
+      }
+    },
+    "comp_p19_i1_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p19_i1_a0 (palette 19, idx 1, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 1,
+        "altIndex": 0,
+        "trialKey": "p19_i1_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "19",
+        "originalPalette": [
+          "#b4ddd4",
+          "#84241a",
+          "#51f310"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#0b6d33",
+        "trialKey": "p19_i1_a0"
+      }
+    },
+    "comp_p19_i1_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p19_i1_a1 (palette 19, idx 1, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 1,
+        "altIndex": 1,
+        "trialKey": "p19_i1_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "19",
+        "originalPalette": [
+          "#b4ddd4",
+          "#84241a",
+          "#51f310"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#33675e",
+        "trialKey": "p19_i1_a1"
+      }
+    },
+    "comp_p19_i2_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p19_i2_a0 (palette 19, idx 2, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 2,
+        "altIndex": 0,
+        "trialKey": "p19_i2_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "19",
+        "originalPalette": [
+          "#b4ddd4",
+          "#84241a",
+          "#51f310"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#4fdf96",
+        "trialKey": "p19_i2_a0"
+      }
+    },
+    "comp_p19_i2_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p19_i2_a1 (palette 19, idx 2, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 2,
+        "altIndex": 1,
+        "trialKey": "p19_i2_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "19",
+        "originalPalette": [
+          "#b4ddd4",
+          "#84241a",
+          "#51f310"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#bae342",
+        "trialKey": "p19_i2_a1"
+      }
+    },
+    "comp_p20_i0_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p20_i0_a0 (palette 20, idx 0, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 0,
+        "altIndex": 0,
+        "trialKey": "p20_i0_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "20",
+        "originalPalette": [
+          "#a0e3b7",
+          "#851e39",
+          "#0df38f"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#387836",
+        "trialKey": "p20_i0_a0"
+      }
+    },
+    "comp_p20_i0_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p20_i0_a1 (palette 20, idx 0, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 0,
+        "altIndex": 1,
+        "trialKey": "p20_i0_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "20",
+        "originalPalette": [
+          "#a0e3b7",
+          "#851e39",
+          "#0df38f"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#169294",
+        "trialKey": "p20_i0_a1"
+      }
+    },
+    "comp_p20_i1_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p20_i1_a0 (palette 20, idx 1, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 1,
+        "altIndex": 0,
+        "trialKey": "p20_i1_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "20",
+        "originalPalette": [
+          "#a0e3b7",
+          "#851e39",
+          "#0df38f"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#214d4e",
+        "trialKey": "p20_i1_a0"
+      }
+    },
+    "comp_p20_i1_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p20_i1_a1 (palette 20, idx 1, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 1,
+        "altIndex": 1,
+        "trialKey": "p20_i1_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "20",
+        "originalPalette": [
+          "#a0e3b7",
+          "#851e39",
+          "#0df38f"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#1e6c3c",
+        "trialKey": "p20_i1_a1"
+      }
+    },
+    "comp_p20_i2_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p20_i2_a0 (palette 20, idx 2, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 2,
+        "altIndex": 0,
+        "trialKey": "p20_i2_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "20",
+        "originalPalette": [
+          "#a0e3b7",
+          "#851e39",
+          "#0df38f"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#afe642",
+        "trialKey": "p20_i2_a0"
+      }
+    },
+    "comp_p20_i2_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p20_i2_a1 (palette 20, idx 2, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 2,
+        "altIndex": 1,
+        "trialKey": "p20_i2_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "20",
+        "originalPalette": [
+          "#a0e3b7",
+          "#851e39",
+          "#0df38f"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#ec102f",
+        "trialKey": "p20_i2_a1"
+      }
+    },
+    "comp_p21_i0_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p21_i0_a0 (palette 21, idx 0, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 0,
+        "altIndex": 0,
+        "trialKey": "p21_i0_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "21",
+        "originalPalette": [
+          "#a1def0",
+          "#34466d",
+          "#57cd9c"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#247672",
+        "trialKey": "p21_i0_a0"
+      }
+    },
+    "comp_p21_i0_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p21_i0_a1 (palette 21, idx 0, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 0,
+        "altIndex": 1,
+        "trialKey": "p21_i0_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "21",
+        "originalPalette": [
+          "#a1def0",
+          "#34466d",
+          "#57cd9c"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#18786a",
+        "trialKey": "p21_i0_a1"
+      }
+    },
+    "comp_p21_i1_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p21_i1_a0 (palette 21, idx 1, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 1,
+        "altIndex": 0,
+        "trialKey": "p21_i1_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "21",
+        "originalPalette": [
+          "#a1def0",
+          "#34466d",
+          "#57cd9c"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#207a3f",
+        "trialKey": "p21_i1_a0"
+      }
+    },
+    "comp_p21_i1_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p21_i1_a1 (palette 21, idx 1, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 1,
+        "altIndex": 1,
+        "trialKey": "p21_i1_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "21",
+        "originalPalette": [
+          "#a1def0",
+          "#34466d",
+          "#57cd9c"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#307759",
+        "trialKey": "p21_i1_a1"
+      }
+    },
+    "comp_p21_i2_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p21_i2_a0 (palette 21, idx 2, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 2,
+        "altIndex": 0,
+        "trialKey": "p21_i2_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "21",
+        "originalPalette": [
+          "#a1def0",
+          "#34466d",
+          "#57cd9c"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#4397d7",
+        "trialKey": "p21_i2_a0"
+      }
+    },
+    "comp_p21_i2_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p21_i2_a1 (palette 21, idx 2, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 2,
+        "altIndex": 1,
+        "trialKey": "p21_i2_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "21",
+        "originalPalette": [
+          "#a1def0",
+          "#34466d",
+          "#57cd9c"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#5089b7",
+        "trialKey": "p21_i2_a1"
+      }
+    },
+    "comp_p22_i0_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p22_i0_a0 (palette 22, idx 0, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 0,
+        "altIndex": 0,
+        "trialKey": "p22_i0_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "22",
+        "originalPalette": [
+          "#8de4d3",
+          "#d30c45",
+          "#94ea5b"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#0b5313",
+        "trialKey": "p22_i0_a0"
+      }
+    },
+    "comp_p22_i0_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p22_i0_a1 (palette 22, idx 0, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 0,
+        "altIndex": 1,
+        "trialKey": "p22_i0_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "22",
+        "originalPalette": [
+          "#8de4d3",
+          "#d30c45",
+          "#94ea5b"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#155126",
+        "trialKey": "p22_i0_a1"
+      }
+    },
+    "comp_p22_i1_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p22_i1_a0 (palette 22, idx 1, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 1,
+        "altIndex": 0,
+        "trialKey": "p22_i1_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "22",
+        "originalPalette": [
+          "#8de4d3",
+          "#d30c45",
+          "#94ea5b"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#267761",
+        "trialKey": "p22_i1_a0"
+      }
+    },
+    "comp_p22_i1_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p22_i1_a1 (palette 22, idx 1, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 1,
+        "altIndex": 1,
+        "trialKey": "p22_i1_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "22",
+        "originalPalette": [
+          "#8de4d3",
+          "#d30c45",
+          "#94ea5b"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#155126",
+        "trialKey": "p22_i1_a1"
+      }
+    },
+    "comp_p22_i2_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p22_i2_a0 (palette 22, idx 2, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 2,
+        "altIndex": 0,
+        "trialKey": "p22_i2_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "22",
+        "originalPalette": [
+          "#8de4d3",
+          "#d30c45",
+          "#94ea5b"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#9bb64b",
+        "trialKey": "p22_i2_a0"
+      }
+    },
+    "comp_p22_i2_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p22_i2_a1 (palette 22, idx 2, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 2,
+        "altIndex": 1,
+        "trialKey": "p22_i2_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "22",
+        "originalPalette": [
+          "#8de4d3",
+          "#d30c45",
+          "#94ea5b"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#c7df68",
+        "trialKey": "p22_i2_a1"
+      }
+    },
+    "comp_p23_i0_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p23_i0_a0 (palette 23, idx 0, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 0,
+        "altIndex": 0,
+        "trialKey": "p23_i0_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "23",
+        "originalPalette": [
+          "#a0e3b7",
+          "#992a1c",
+          "#88dc40"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#57832e",
+        "trialKey": "p23_i0_a0"
+      }
+    },
+    "comp_p23_i0_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p23_i0_a1 (palette 23, idx 0, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 0,
+        "altIndex": 1,
+        "trialKey": "p23_i0_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "23",
+        "originalPalette": [
+          "#a0e3b7",
+          "#992a1c",
+          "#88dc40"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#158a2c",
+        "trialKey": "p23_i0_a1"
+      }
+    },
+    "comp_p23_i1_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p23_i1_a0 (palette 23, idx 1, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 1,
+        "altIndex": 0,
+        "trialKey": "p23_i1_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "23",
+        "originalPalette": [
+          "#a0e3b7",
+          "#992a1c",
+          "#88dc40"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#33837f",
+        "trialKey": "p23_i1_a0"
+      }
+    },
+    "comp_p23_i1_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p23_i1_a1 (palette 23, idx 1, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 1,
+        "altIndex": 1,
+        "trialKey": "p23_i1_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "23",
+        "originalPalette": [
+          "#a0e3b7",
+          "#992a1c",
+          "#88dc40"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#197959",
+        "trialKey": "p23_i1_a1"
+      }
+    },
+    "comp_p23_i2_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p23_i2_a0 (palette 23, idx 2, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 2,
+        "altIndex": 0,
+        "trialKey": "p23_i2_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "23",
+        "originalPalette": [
+          "#a0e3b7",
+          "#992a1c",
+          "#88dc40"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#cbdf51",
+        "trialKey": "p23_i2_a0"
+      }
+    },
+    "comp_p23_i2_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p23_i2_a1 (palette 23, idx 2, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 2,
+        "altIndex": 1,
+        "trialKey": "p23_i2_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "23",
+        "originalPalette": [
+          "#a0e3b7",
+          "#992a1c",
+          "#88dc40"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#1be19f",
+        "trialKey": "p23_i2_a1"
+      }
+    },
+    "comp_p24_i0_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p24_i0_a0 (palette 24, idx 0, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 0,
+        "altIndex": 0,
+        "trialKey": "p24_i0_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "24",
+        "originalPalette": [
+          "#8de4d3",
+          "#553096",
+          "#c2df7d"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#0f767a",
+        "trialKey": "p24_i0_a0"
+      }
+    },
+    "comp_p24_i0_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p24_i0_a1 (palette 24, idx 0, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 0,
+        "altIndex": 1,
+        "trialKey": "p24_i0_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "24",
+        "originalPalette": [
+          "#8de4d3",
+          "#553096",
+          "#c2df7d"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#267761",
+        "trialKey": "p24_i0_a1"
+      }
+    },
+    "comp_p24_i1_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p24_i1_a0 (palette 24, idx 1, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 1,
+        "altIndex": 0,
+        "trialKey": "p24_i1_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "24",
+        "originalPalette": [
+          "#8de4d3",
+          "#553096",
+          "#c2df7d"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#5c8142",
+        "trialKey": "p24_i1_a0"
+      }
+    },
+    "comp_p24_i1_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p24_i1_a1 (palette 24, idx 1, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 1,
+        "altIndex": 1,
+        "trialKey": "p24_i1_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "24",
+        "originalPalette": [
+          "#8de4d3",
+          "#553096",
+          "#c2df7d"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#334d37",
+        "trialKey": "p24_i1_a1"
+      }
+    },
+    "comp_p24_i2_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p24_i2_a0 (palette 24, idx 2, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 2,
+        "altIndex": 0,
+        "trialKey": "p24_i2_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "24",
+        "originalPalette": [
+          "#8de4d3",
+          "#553096",
+          "#c2df7d"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#2499d7",
+        "trialKey": "p24_i2_a0"
+      }
+    },
+    "comp_p24_i2_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p24_i2_a1 (palette 24, idx 2, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "0.5",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 2,
+        "altIndex": 1,
+        "trialKey": "p24_i2_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "24",
+        "originalPalette": [
+          "#8de4d3",
+          "#553096",
+          "#c2df7d"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 0.5,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#1f84ec",
+        "trialKey": "p24_i2_a1"
+      }
+    },
+    "comp_p25_i0_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p25_i0_a0 (palette 25, idx 0, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 0,
+        "altIndex": 0,
+        "trialKey": "p25_i0_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "25",
+        "originalPalette": [
+          "#b4ddd4",
+          "#874e57",
+          "#6cd030"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#57832e",
+        "trialKey": "p25_i0_a0"
+      }
+    },
+    "comp_p25_i0_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p25_i0_a1 (palette 25, idx 0, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 0,
+        "altIndex": 1,
+        "trialKey": "p25_i0_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "25",
+        "originalPalette": [
+          "#b4ddd4",
+          "#874e57",
+          "#6cd030"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#1d866d",
+        "trialKey": "p25_i0_a1"
+      }
+    },
+    "comp_p25_i1_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p25_i1_a0 (palette 25, idx 1, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 1,
+        "altIndex": 0,
+        "trialKey": "p25_i1_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "25",
+        "originalPalette": [
+          "#b4ddd4",
+          "#874e57",
+          "#6cd030"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#2c5c39",
+        "trialKey": "p25_i1_a0"
+      }
+    },
+    "comp_p25_i1_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p25_i1_a1 (palette 25, idx 1, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 1,
+        "altIndex": 1,
+        "trialKey": "p25_i1_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "25",
+        "originalPalette": [
+          "#b4ddd4",
+          "#874e57",
+          "#6cd030"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#18857f",
+        "trialKey": "p25_i1_a1"
+      }
+    },
+    "comp_p25_i2_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p25_i2_a0 (palette 25, idx 2, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 2,
+        "altIndex": 0,
+        "trialKey": "p25_i2_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "25",
+        "originalPalette": [
+          "#b4ddd4",
+          "#874e57",
+          "#6cd030"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#eb1138",
+        "trialKey": "p25_i2_a0"
+      }
+    },
+    "comp_p25_i2_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p25_i2_a1 (palette 25, idx 2, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.0",
+        "selectedIndex": 2,
+        "altIndex": 1,
+        "trialKey": "p25_i2_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "25",
+        "originalPalette": [
+          "#b4ddd4",
+          "#874e57",
+          "#6cd030"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#44df9f",
+        "trialKey": "p25_i2_a1"
+      }
+    },
+    "comp_p26_i0_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p26_i0_a0 (palette 26, idx 0, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 0,
+        "altIndex": 0,
+        "trialKey": "p26_i0_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "26",
+        "originalPalette": [
+          "#72e5ef",
+          "#d6061a",
+          "#91da4d"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#02531d",
+        "trialKey": "p26_i0_a0"
+      }
+    },
+    "comp_p26_i0_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p26_i0_a1 (palette 26, idx 0, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 0,
+        "altIndex": 1,
+        "trialKey": "p26_i0_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "26",
+        "originalPalette": [
+          "#72e5ef",
+          "#d6061a",
+          "#91da4d"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#0a4f4e",
+        "trialKey": "p26_i0_a1"
+      }
+    },
+    "comp_p26_i1_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p26_i1_a0 (palette 26, idx 1, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 1,
+        "altIndex": 0,
+        "trialKey": "p26_i1_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "26",
+        "originalPalette": [
+          "#72e5ef",
+          "#d6061a",
+          "#91da4d"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#20502e",
+        "trialKey": "p26_i1_a0"
+      }
+    },
+    "comp_p26_i1_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p26_i1_a1 (palette 26, idx 1, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 1,
+        "altIndex": 1,
+        "trialKey": "p26_i1_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "26",
+        "originalPalette": [
+          "#72e5ef",
+          "#d6061a",
+          "#91da4d"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#255026",
+        "trialKey": "p26_i1_a1"
+      }
+    },
+    "comp_p26_i2_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p26_i2_a0 (palette 26, idx 2, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 2,
+        "altIndex": 0,
+        "trialKey": "p26_i2_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "26",
+        "originalPalette": [
+          "#72e5ef",
+          "#d6061a",
+          "#91da4d"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#aee39a",
+        "trialKey": "p26_i2_a0"
+      }
+    },
+    "comp_p26_i2_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p26_i2_a1 (palette 26, idx 2, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "0.5",
+        "selectedIndex": 2,
+        "altIndex": 1,
+        "trialKey": "p26_i2_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "26",
+        "originalPalette": [
+          "#72e5ef",
+          "#d6061a",
+          "#91da4d"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 0.5
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#d8dc35",
+        "trialKey": "p26_i2_a1"
+      }
+    },
+    "comp_p27_i0_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p27_i0_a0 (palette 27, idx 0, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 0,
+        "altIndex": 0,
+        "trialKey": "p27_i0_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "27",
+        "originalPalette": [
+          "#72e5ef",
+          "#7b038e",
+          "#40e18c"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#258387",
+        "trialKey": "p27_i0_a0"
+      }
+    },
+    "comp_p27_i0_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p27_i0_a1 (palette 27, idx 0, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 0,
+        "altIndex": 1,
+        "trialKey": "p27_i0_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "27",
+        "originalPalette": [
+          "#72e5ef",
+          "#7b038e",
+          "#40e18c"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 0,
+        "replacementHex": "#1c5b5a",
+        "trialKey": "p27_i0_a1"
+      }
+    },
+    "comp_p27_i1_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p27_i1_a0 (palette 27, idx 1, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 1,
+        "altIndex": 0,
+        "trialKey": "p27_i1_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "27",
+        "originalPalette": [
+          "#72e5ef",
+          "#7b038e",
+          "#40e18c"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#385a3a",
+        "trialKey": "p27_i1_a0"
+      }
+    },
+    "comp_p27_i1_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p27_i1_a1 (palette 27, idx 1, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 1,
+        "altIndex": 1,
+        "trialKey": "p27_i1_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "27",
+        "originalPalette": [
+          "#72e5ef",
+          "#7b038e",
+          "#40e18c"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 1,
+        "replacementHex": "#194f46",
+        "trialKey": "p27_i1_a1"
+      }
+    },
+    "comp_p27_i2_a0": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p27_i2_a0 (palette 27, idx 2, alt 0)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 2,
+        "altIndex": 0,
+        "trialKey": "p27_i2_a0"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "27",
+        "originalPalette": [
+          "#72e5ef",
+          "#7b038e",
+          "#40e18c"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#888bce",
+        "trialKey": "p27_i2_a0"
+      }
+    },
+    "comp_p27_i2_a1": {
+      "baseComponent": "colorTrial",
+      "description": "Comparison p27_i2_a1 (palette 27, idx 2, alt 1)",
+      "meta": {
+        "palette_size": "3",
+        "PD_ciede2000": "1.0",
+        "ND_nameDifference": "1.0",
+        "NU_nameUniqueness": "0.0",
+        "PP_pairPreference": "1.0",
+        "selectedIndex": 2,
+        "altIndex": 1,
+        "trialKey": "p27_i2_a1"
+      },
+      "parameters": {
+        "taskid": "paletteResponse",
+        "paletteId": "27",
+        "originalPalette": [
+          "#72e5ef",
+          "#7b038e",
+          "#40e18c"
+        ],
+        "weights": {
+          "ciede2000": 1.0,
+          "nameDifference": 1.0,
+          "nameUniqueness": 0.0,
+          "pairPreference": 1.0
+        },
+        "selectedIndex": 2,
+        "replacementHex": "#8d9dca",
+        "trialKey": "p27_i2_a1"
+      }
+    }
+  },
+  "sequence": {
+    "order": "fixed",
+    "components": [
+      "introduction",
+      "comp_p12_i1_a0",
+      "comp_p23_i0_a1",
+      "comp_p5_i0_a1",
+      "comp_p9_i1_a1",
+      "comp_p24_i0_a0",
+      "comp_p1_i2_a0",
+      "comp_p14_i1_a0",
+      "comp_p5_i0_a0",
+      "comp_p14_i0_a1",
+      "comp_p2_i2_a1",
+      "comp_p21_i2_a1",
+      "comp_p10_i1_a1",
+      "comp_p20_i2_a0",
+      "comp_p5_i2_a0",
+      "comp_p6_i0_a0",
+      "comp_p3_i2_a1",
+      "comp_p22_i1_a0",
+      "comp_p15_i2_a1",
+      "comp_p18_i1_a0",
+      "comp_p10_i2_a1",
+      "comp_p27_i2_a0",
+      "comp_p23_i2_a1",
+      "comp_p15_i2_a0",
+      "comp_p2_i1_a0",
+      "comp_p17_i1_a1",
+      "comp_p20_i1_a0",
+      "comp_p10_i0_a0",
+      "comp_p6_i1_a1",
+      "comp_p11_i2_a0",
+      "comp_p25_i1_a0",
+      "comp_p16_i1_a0",
+      "comp_p8_i2_a0",
+      "comp_p11_i0_a0",
+      "comp_p19_i0_a0",
+      "comp_p6_i2_a0",
+      "comp_p8_i1_a1",
+      "comp_p4_i0_a0",
+      "comp_p17_i0_a1",
+      "comp_p9_i1_a0",
+      "comp_p20_i0_a0",
+      "comp_p3_i1_a0",
+      "comp_p22_i2_a0",
+      "comp_p26_i1_a0",
+      "comp_p10_i2_a0",
+      "comp_p19_i2_a0",
+      "comp_p2_i1_a1",
+      "comp_p20_i0_a1",
+      "comp_p21_i1_a1",
+      "comp_p14_i1_a1",
+      "comp_p18_i0_a1",
+      "comp_p13_i0_a0",
+      "comp_p16_i1_a1",
+      "comp_p22_i2_a1",
+      "comp_p6_i2_a1",
+      "comp_p5_i1_a0",
+      "comp_p11_i1_a0",
+      "comp_p12_i2_a0",
+      "comp_p14_i0_a0",
+      "comp_p26_i0_a1",
+      "comp_p7_i2_a0",
+      "comp_p22_i0_a0",
+      "comp_p1_i1_a1",
+      "comp_p7_i1_a1",
+      "comp_p11_i0_a1",
+      "comp_p17_i2_a0",
+      "comp_p11_i2_a1",
+      "comp_p21_i0_a1",
+      "comp_p25_i0_a1",
+      "comp_p16_i0_a1",
+      "comp_p20_i2_a1",
+      "comp_p13_i2_a1",
+      "comp_p2_i2_a0",
+      "comp_p10_i1_a0",
+      "comp_p2_i0_a1",
+      "comp_p24_i1_a0",
+      "comp_p21_i2_a0",
+      "comp_p26_i1_a1",
+      "comp_p27_i0_a1",
+      "comp_p21_i1_a0",
+      "comp_p8_i0_a1",
+      "comp_p27_i0_a0",
+      "comp_p25_i1_a1",
+      "comp_p17_i2_a1",
+      "comp_p23_i2_a0",
+      "comp_p1_i0_a1",
+      "comp_p7_i1_a0",
+      "comp_p4_i1_a1",
+      "comp_p18_i0_a0",
+      "comp_p3_i2_a0",
+      "comp_p25_i2_a1",
+      "comp_p10_i0_a1",
+      "comp_p13_i1_a1",
+      "comp_p6_i1_a0",
+      "comp_p26_i0_a0",
+      "comp_p15_i0_a1",
+      "comp_p12_i2_a1",
+      "comp_p17_i0_a0",
+      "comp_p19_i0_a1",
+      "comp_p5_i1_a1",
+      "comp_p11_i1_a1",
+      "comp_p3_i1_a1",
+      "comp_p18_i2_a1",
+      "comp_p1_i2_a1",
+      "comp_p24_i0_a1",
+      "comp_p26_i2_a1",
+      "comp_p27_i1_a1",
+      "comp_p12_i0_a1",
+      "comp_p5_i2_a1",
+      "comp_p24_i2_a0",
+      "comp_p27_i1_a0",
+      "comp_p25_i2_a0",
+      "comp_p13_i0_a1",
+      "comp_p23_i1_a0",
+      "comp_p19_i2_a1",
+      "comp_p3_i0_a1",
+      "comp_p9_i2_a1",
+      "comp_p14_i2_a1",
+      "comp_p3_i0_a0",
+      "comp_p7_i0_a0",
+      "comp_p4_i2_a0",
+      "comp_p13_i1_a0",
+      "comp_p17_i1_a0",
+      "comp_p4_i1_a0",
+      "comp_p26_i2_a0",
+      "comp_p15_i0_a0",
+      "comp_p21_i0_a0",
+      "comp_p22_i0_a1",
+      "comp_p1_i0_a0",
+      "comp_p27_i2_a1",
+      "comp_p23_i0_a0",
+      "comp_p15_i1_a0",
+      "comp_p20_i1_a1",
+      "comp_p2_i0_a0",
+      "comp_p14_i2_a0",
+      "comp_p15_i1_a1",
+      "comp_p9_i0_a0",
+      "comp_p4_i0_a1",
+      "comp_p9_i2_a0",
+      "comp_p7_i0_a1",
+      "comp_p8_i0_a0",
+      "comp_p22_i1_a1",
+      "comp_p18_i1_a1",
+      "comp_p23_i1_a1",
+      "comp_p4_i2_a1",
+      "comp_p16_i0_a0",
+      "comp_p8_i2_a1",
+      "comp_p24_i1_a1",
+      "comp_p8_i1_a0",
+      "comp_p24_i2_a1",
+      "comp_p12_i0_a0",
+      "comp_p19_i1_a0",
+      "comp_p6_i0_a1",
+      "comp_p16_i2_a1",
+      "comp_p7_i2_a1",
+      "comp_p19_i1_a1",
+      "comp_p25_i0_a0",
+      "comp_p12_i1_a1",
+      "comp_p9_i0_a1",
+      "comp_p16_i2_a0",
+      "comp_p13_i2_a0",
+      "comp_p1_i1_a0",
+      "comp_p18_i2_a0",
+      "completion"
+    ]
+  }
+}
