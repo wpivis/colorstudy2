@@ -1,0 +1,33 @@
+/* Next Button Styling for Color Palette Study */
+
+/* Target the Mantine Group that comes after responseBlock (they're siblings) */
+.responseBlock ~ .mantine-Group-root {
+  --group-justify: center !important;
+  justify-content: center !important;
+}
+
+/* Style buttons in that Mantine Group */
+.responseBlock ~ .mantine-Group-root button {
+  box-sizing: border-box;
+  transition: background-color 0.2s ease;
+}
+
+/* Enabled/Available Next Button - Light Gray */
+.responseBlock ~ .mantine-Group-root button:not(:disabled) {
+  background-color: #d0d0d0 !important;
+  color: #333 !important;
+  border-color: #a8a8a8 !important;
+  cursor: pointer;
+}
+
+.responseBlock ~ .mantine-Group-root button:not(:disabled):hover {
+  background-color: #b8b8b8 !important;
+}
+
+/* Disabled Next Button - Darker/Different Gray */
+.responseBlock ~ .mantine-Group-root button:disabled {
+  background-color: #e8e8e8 !important;
+  color: #999 !important;
+  border-color: #d0d0d0 !important;
+  cursor: not-allowed;
+}

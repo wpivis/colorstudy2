@@ -24,6 +24,8 @@
       "type": "react-component",
       "path": "color-palette-study/assets/ColorPaletteComparison.tsx",
       "nextButtonLocation": "belowStimulus",
+      "nextOnEnter": true,
+      "nextButtonText": "Next: Click or Press Enter",
       "response": [
         {
           "id": "paletteResponse",
