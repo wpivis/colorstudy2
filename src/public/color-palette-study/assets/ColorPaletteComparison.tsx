@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { Box, Slider, Text, Group, Stack } from '@mantine/core';
 import { VegaLite } from 'react-vega';
 import { StimulusParams } from '../../../store/types';
+import './buttonStyles.css';
 
 type ColorPaletteComparisonProps = StimulusParams<{
   taskid: string;
@@ -10,6 +11,7 @@ type ColorPaletteComparisonProps = StimulusParams<{
   selectedIndex: number;        // 0/1/2
   replacementHex: string;       // the chosen alternative hex for that selectedIndex
   trialKey: string;             // unique key (used for deterministic left/right)
+  flipLR?: boolean;             // if true, swap left/right relative to the deterministic assignment
   weights?: {
     ciede2000: number;
     pairPreference: number;
@@ -25,7 +27,7 @@ const normalizeHex = (h: string) => {
   return (s.startsWith('#') ? s : `#${s}`).toLowerCase();
 };
 
-// Deterministic string -> integer hash (fast, stable, no deps)
+// Deterministic string -> integer hash (fast, stable)
 const hashString = (s: string) => {
   let h = 2166136261; // FNV-1a-ish
   for (let i = 0; i < s.length; i += 1) {
@@ -43,6 +45,7 @@ function ColorPaletteComparison({ parameters, setAnswer }: ColorPaletteCompariso
     selectedIndex,
     replacementHex,
     trialKey,
+    flipLR,
   } = parameters;
 
   const [sliderValue, setSliderValue] = useState<number>(50);
@@ -83,13 +86,24 @@ function ColorPaletteComparison({ parameters, setAnswer }: ColorPaletteCompariso
   }, [originalPalette, selectedIndex, replacementHex]);
 
   // Deterministic left/right assignment (so refresh won't flip)
-  const leftIsOriginal = useMemo(() => {
+  const leftIsOriginalBase = useMemo(() => {
     const h = hashString(trialKey || `${paletteId}-${selectedIndex}-${replacementHex}`);
     return (h % 2) === 0;
   }, [trialKey, paletteId, selectedIndex, replacementHex]);
 
+  const leftIsOriginal = flipLR ? !leftIsOriginalBase : leftIsOriginalBase;
   const leftPalette = leftIsOriginal ? originalPalette : modifiedPalette;
   const rightPalette = leftIsOriginal ? modifiedPalette : originalPalette;
+
+  // Force a consistent "trial transition" re-mount for *all* left/right stimuli (swatches + all charts).
+  // Maps already visually “flash” because Vega re-initializes more noticeably; this key makes the
+  // bar/scatter/swatches re-mount at the same moment so the whole stimulus updates together.
+  const stimulusTransitionKey = useMemo(() => {
+    return (
+      trialKey ||
+      `${paletteId ?? 'noPalette'}-${selectedIndex}-${normalizeHex(replacementHex)}-${flipLR ? 1 : 0}`
+    );
+  }, [trialKey, paletteId, selectedIndex, replacementHex, flipLR]);
 
   const marks = [
     { value: 0, label: 'Strongly prefer LEFT' },
@@ -199,6 +213,8 @@ function ColorPaletteComparison({ parameters, setAnswer }: ColorPaletteCompariso
       replacementHex: normalizeHex(replacementHex),
       originalPalette: originalPalette.map(normalizeHex),
       modifiedPalette: modifiedPalette.map(normalizeHex),
+      flipLR: !!flipLR,
+      leftIsOriginalBase,
       leftIsOriginal,
       preference: sliderValue,
       timestamp: new Date().toISOString(),
@@ -239,6 +255,37 @@ function ColorPaletteComparison({ parameters, setAnswer }: ColorPaletteCompariso
     setAnswer,
   ]);
 
+  // Keyboard shortcut: Space bar to click Next (after interaction)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.code === 'Space' && hasInteracted) {
+        e.preventDefault();
+
+        // simulate Enter key press (since ReVISit already listens to Enter internally)
+        const enterEvent = new KeyboardEvent('keydown', {
+          key: 'Enter',
+          code: 'Enter',
+          bubbles: true,
+        });
+
+        document.dispatchEvent(enterEvent);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [hasInteracted]);
+
+  useEffect(() => {
+    document.body.classList.add('hide-next-on-trials');
+    return () => {
+      document.body.classList.remove('hide-next-on-trials');
+    };
+  }, []);
+
   return (
     <Stack gap="xl" p="md">
       {/* Center the left palette | slider | right palette row on the page */}
@@ -275,7 +322,12 @@ function ColorPaletteComparison({ parameters, setAnswer }: ColorPaletteCompariso
               backgroundColor: 'white',
             }}
           >
-            <Stack gap="md" style={{ flex: 1, maxWidth: 420 }}>
+            <Stack
+              key={`left-${stimulusTransitionKey}`}
+              className="stimulus-transition"
+              gap="md"
+              style={{ flex: 1, maxWidth: 420 }}
+              >
               <Group gap="xs" justify="center">
                 {leftPalette.map((color, index) => (
                   <Box
@@ -340,11 +392,9 @@ function ColorPaletteComparison({ parameters, setAnswer }: ColorPaletteCompariso
                 markLabel: { fontSize: 9, width: 70, whiteSpace: 'normal', textAlign: 'center' },
               }}
             />
-            {!hasInteracted && (
-              <Text size="sm" c="dimmed" mt="xl" ta="center">
-                Please move the slider to continue.
-              </Text>
-            )}
+            <Text size="sm" c="dimmed" mt="xl" ta="center">
+              Please move the slider and press the Spacebar to continue.
+            </Text>
           </Box>
 
           {/* RIGHT Palette (B) */}
@@ -363,7 +413,12 @@ function ColorPaletteComparison({ parameters, setAnswer }: ColorPaletteCompariso
               backgroundColor: 'white',
             }}
           >
-            <Stack gap="md" style={{ flex: 1, maxWidth: 420 }}>
+            <Stack
+            key={`right-${stimulusTransitionKey}`}
+            className="stimulus-transition"
+            gap="md"
+            style={{ flex: 1, maxWidth: 420 }}
+            >
               <Group gap="xs" justify="center">
                 {rightPalette.map((color, index) => (
                   <Box

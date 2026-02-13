@@ -1,27 +1,20 @@
-# Welcome to the Color Palette Comparison Study!
+In this experiment, you will be presented **pairs of color palettes** along with example visualizations, one on the left and one on the right, displayed side-by-side like below:
 
-In this experiment, you will be presented pairs of color palettes, one on the left and one on the right. There will be a slider in the middle to indicate preferences.
+<div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
 
-## Here is an example of what a trial will look like:
+  <img 
+    src="color-palette-study/assets/example_trial.png" 
+    alt="Example trial"
+    style="max-width: 730px; width: 100%; border-radius: 8px;"
+  />
+</div>
 
-## How the experiment works
-1. On each trial, you will see **two color palettes** displayed side by side, along with example visualizations (a map, a bar chart, and a scatterplot)
-2. Your task is to use the **slider in the middle** to indicate your preference between the two palettes
+Your task is to use the **slider in the middle** to indicate your preference between the two palettes.
+- You can drag the slider **left** if you like the left palette better, **right** if you like the right palette better, or center the slider at **no preference** if you like them both equally.
+- Please use the **full range** of the scale to indicate how strongly you feel. For example, if you like one palette only slightly more, move the slider just a little in that direction. If you prefer it much more strongly, move the slider closer to the extreme end of the scale. 
+- **Please note** that in order to move onto the next trial, it will be necessary to move the slider and then press the **Spacebar**.
 
-- You can drag the slider:
-   - Left to indicate how much you prefer the **left** palette  
-   - Right to indicate how much you prefer the **right** palette  
-   - Or center the slider to indicate **no preference**
-3. Click **“Next”** to move to the next comparison
-
-**Please note** that the "Next" button will be enabled only after moving the slider. If you wish to indicate "no preference", move the slider and then center it back to "no preference".
-
-## What to expect
-- During the experiment, you will complete many such trials
-- The experiment is divided into **6 blocks**, with **5 short breaks** indicating your progress. There will be a break after you have completed every block.
-- Total time for the experiment is approximately **25-30 minutes**
-
-Please take your time when making each comparison. There are no right or wrong answers.
+The experiment is divided into **6 blocks**, with a **short break** after each block to indicate your progress. Total time for the experiment is approximately **25-30 minutes**.
 
 When you are ready, click **“Next”** to begin!
 

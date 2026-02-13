@@ -1,7 +1,13 @@
-# Break
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 25vh; text-align: center;">
 
-You have completed **4 out of 6 blocks**.
+## Break
 
-Take a short break if you’d like.
+<p style="font-size: 18px;">
+You have completed <strong>4 out of 6 blocks</strong>.
+</p>
 
-Click **Next** when you’re ready to continue.
+<p style="font-size: 18px;">
+Feel free to take a short break. When you're ready, click <strong>Next</strong> to continue.
+</p>
+
+</div>

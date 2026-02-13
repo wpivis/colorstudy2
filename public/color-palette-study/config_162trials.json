@@ -15,7 +15,7 @@
   "uiConfig": {
     "contactEmail": "contact@revisit.dev",
     "logoPath": "revisitAssets/revisitLogoSquare.svg",
-    "withProgressBar": true,
+    "withProgressBar": false,
     "autoDownloadStudy": false,
     "withSidebar": false
   },
@@ -24,6 +24,8 @@
       "type": "react-component",
       "path": "color-palette-study/assets/ColorPaletteComparison.tsx",
       "nextButtonLocation": "belowStimulus",
+      "nextOnEnter": true,
+      "nextButtonText": "Next: Click or Press Space bar",
       "response": [
         {
           "id": "paletteResponse",

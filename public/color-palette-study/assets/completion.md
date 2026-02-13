@@ -1,15 +1,19 @@
-# Thank You!
+<div style="
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    max-width: 950px;
+    margin: 150px auto 0 auto;
+    padding: 0 20px;">
 
-You have completed all the trials.
+## Debrief
 
-Thank you for participating in our color palette comparison study.
+Thank you for participating in our study!
 
-Your responses have been recorded and will help us better understand how people perceive and prefer different color combinations in data visualizations.
+The information you provided will help us better understand people's color preferences in data visualizations such as maps and charts. Using this information, we can improve color palette generation tools used for data visualization design.
 
-## What's Next?
+If you have any questions about this study, please contact the research team. Please click Next to complete the study.
 
-Your data has been automatically saved. If you have any questions about this study, please contact the research team.
-
----
-
-**Study Complete**
+</div>
