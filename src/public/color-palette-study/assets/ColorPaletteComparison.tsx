@@ -13,6 +13,7 @@ type ColorPaletteComparisonProps = StimulusParams<{
   selectedIndex: number; // 0/1/2
   replacementHex: string; // the chosen alternative hex for that selectedIndex
   trialKey: string; // unique key (used for deterministic left/right)
+  flipLR?: boolean; // optional explicit left/right flip override
   weights?: {
     ciede2000: number;
     pairPreference: number;
