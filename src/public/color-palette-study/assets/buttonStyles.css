@@ -67,19 +67,25 @@ body.hide-next-on-trials .responseBlock ~ .mantine-Group-root button:last-child 
   position: relative;
 }
 
-/* Brief white overlay flash */
+/* Brief white overlay BLINK */
 .stimulus-transition::after {
   content: "";
   position: absolute;
   inset: 0;
   background: white;
-  opacity: 0;
+  opacity: 1;               /* start fully on */
   pointer-events: none;
-  animation: stimulusFlash 320ms ease-out;
+
+  /* steps(1,end) = hold at opacity:1, then jump to 0 at the end */
+  animation: stimulusBlink 250ms steps(1, end) forwards;
 }
 
-@keyframes stimulusFlash {
-  0%   { opacity: 0.85; }
-  100% { opacity: 0; }
+@keyframes stimulusBlink {
+  from { opacity: 1; }
+  to   { opacity: 0; }
 }
 
+/* Prevent scrolling when palettes are wider than the viewport */
+html, body {
+  overflow-x: hidden;
+}

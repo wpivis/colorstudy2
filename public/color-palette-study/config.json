@@ -68,7 +68,7 @@
     "consent": {
       "type": "markdown",
       "path": "color-palette-study/assets/consent.md",
-      "nextButtonText": "Agree",
+      "nextButtonText": "Start",
       "response": [
         {
           "id": "signature",
