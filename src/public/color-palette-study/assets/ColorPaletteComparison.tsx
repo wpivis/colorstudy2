@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
-import { Box, Slider, Text, Group, Stack } from '@mantine/core';
+import {
+  Box, Slider, Text, Group, Stack,
+} from '@mantine/core';
 import { VegaLite } from 'react-vega';
 import { StimulusParams } from '../../../store/types';
 import './buttonStyles.css';
@@ -8,10 +10,9 @@ type ColorPaletteComparisonProps = StimulusParams<{
   taskid: string;
   paletteId?: string;
   originalPalette: string[];
-  selectedIndex: number;        // 0/1/2
-  replacementHex: string;       // the chosen alternative hex for that selectedIndex
-  trialKey: string;             // unique key (used for deterministic left/right)
-  flipLR?: boolean;             // if true, swap left/right relative to the deterministic assignment
+  selectedIndex: number; // 0/1/2
+  replacementHex: string; // the chosen alternative hex for that selectedIndex
+  trialKey: string; // unique key (used for deterministic left/right)
   weights?: {
     ciede2000: number;
     pairPreference: number;
@@ -31,9 +32,11 @@ const normalizeHex = (h: string) => {
 const hashString = (s: string) => {
   let h = 2166136261; // FNV-1a-ish
   for (let i = 0; i < s.length; i += 1) {
+    // eslint-disable-next-line no-bitwise
     h ^= s.charCodeAt(i);
     h = Math.imul(h, 16777619);
   }
+  // eslint-disable-next-line no-bitwise
   return h >>> 0;
 };
 
@@ -252,6 +255,7 @@ function ColorPaletteComparison({ parameters, setAnswer }: ColorPaletteCompariso
     originalPalette,
     modifiedPalette,
     leftIsOriginal,
+    hasInteracted,
     setAnswer,
   ]);
 
@@ -297,13 +301,13 @@ function ColorPaletteComparison({ parameters, setAnswer }: ColorPaletteCompariso
         }}
       >
         <Group
-          gap={40}                 // adds breathing room so end labels don't touch palette boxes
+          gap={40} // adds breathing room so end labels don't touch palette boxes
           align="flex-start"
           justify="center"
           wrap="nowrap"
           style={{
             width: '100%',
-            maxWidth: 1250,        // keeps the row centered instead of hugging the left edge
+            maxWidth: 1250, // keeps the row centered instead of hugging the left edge
           }}
         >
           {/* LEFT Palette (A) */}
@@ -377,7 +381,7 @@ function ColorPaletteComparison({ parameters, setAnswer }: ColorPaletteCompariso
               marks={marks}
               min={0}
               max={100}
-              label={null}           // hides the floating label while dragging/clicking
+              label={null} // hides the floating label while dragging/clicking
               styles={{
                 // “black dot” centered
                 track: { backgroundColor: 'transparent' },
@@ -389,7 +393,9 @@ function ColorPaletteComparison({ parameters, setAnswer }: ColorPaletteCompariso
                   height: 20,
                 },
                 mark: { borderColor: '#999' },
-                markLabel: { fontSize: 9, width: 70, whiteSpace: 'normal', textAlign: 'center' },
+                markLabel: {
+                  fontSize: 9, width: 70, whiteSpace: 'normal', textAlign: 'center',
+                },
               }}
             />
             <Text size="sm" c="dimmed" mt="xl" ta="center">
@@ -444,7 +450,7 @@ function ColorPaletteComparison({ parameters, setAnswer }: ColorPaletteCompariso
               </Group>
             </Stack>
           </Box>
-      </Group>
+        </Group>
       </Box>
     </Stack>
   );
