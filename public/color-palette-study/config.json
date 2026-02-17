@@ -65,6 +65,30 @@
       }
   },
   "components": {
+    "consent": {
+      "type": "markdown",
+      "path": "color-palette-study/assets/consent.md",
+      "nextButtonText": "Agree",
+      "response": [
+        {
+          "id": "signature",
+          "prompt": "Please type your full name as your electronic signature",
+          "location": "belowStimulus",
+          "type": "shortText",
+          "placeholder": "Type your full name"
+        },
+        {
+          "id": "accept",
+          "prompt": "Do you consent to the study and wish to continue?",
+          "location": "belowStimulus",
+          "type": "radio",
+          "options": [
+            "Decline",
+            "Accept"
+          ]
+        }
+      ]
+    },
     "introduction": {
       "type": "markdown",
       "path": "color-palette-study/assets/introduction.md",
@@ -11073,6 +11097,7 @@
   "sequence": {
     "order": "fixed",
     "components": [
+      "consent",
       "introduction",
       {
         "id": "block_1",
