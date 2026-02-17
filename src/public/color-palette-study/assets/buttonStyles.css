@@ -1,0 +1,85 @@
+/* Next Button Styling for Color Palette Study */
+
+/* Target the Mantine Group that comes after responseBlock (they're siblings) */
+.responseBlock ~ .mantine-Group-root {
+  --group-justify: center !important;
+  justify-content: center !important;
+}
+
+/* Style buttons in that Mantine Group */
+.responseBlock ~ .mantine-Group-root button {
+  box-sizing: border-box;
+  transition: background-color 0.2s ease;
+}
+
+/* Enabled/Available Next Button - Light Gray */
+.responseBlock ~ .mantine-Group-root button:not(:disabled) {
+  background-color: #d0d0d0 !important;
+  color: #333 !important;
+  border-color: #a8a8a8 !important;
+  cursor: pointer;
+}
+
+.responseBlock ~ .mantine-Group-root button:not(:disabled):hover {
+  background-color: #b8b8b8 !important;
+}
+
+/* Disabled Next Button - Darker/Different Gray */
+.responseBlock ~ .mantine-Group-root button:disabled {
+  background-color: #e8e8e8 !important;
+  color: #999 !important;
+  border-color: #d0d0d0 !important;
+  cursor: not-allowed;
+}
+
+/* Hide NEXT button only during trials */
+body.hide-next-on-trials .responseBlock ~ .mantine-Group-root button:last-child {
+  display: none !important;
+}
+
+/* Make wrapped lines align under the bullet text */
+.markdown ul {
+  list-style-position: outside;
+  padding-left: 1.75rem;   /* adjust: 1rem–1.75rem depending on need */
+  margin-left: 0;
+}
+
+.markdown li {
+  text-indent: 0;
+}
+
+/* Shake animation for incorrect responses */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-6px); }
+  80% { transform: translateX(6px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.35s ease-in-out;
+}
+
+/* Makes the whole stimulus box do a clear "flash" every time it mounts */
+.stimulus-transition {
+  position: relative;
+}
+
+/* Brief white overlay flash */
+.stimulus-transition::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: white;
+  opacity: 0;
+  pointer-events: none;
+  animation: stimulusFlash 320ms ease-out;
+}
+
+@keyframes stimulusFlash {
+  0%   { opacity: 0.85; }
+  100% { opacity: 0; }
+}
+
