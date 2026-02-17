@@ -1,4 +1,6 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { 
+  useEffect, useMemo, useRef, useState,
+} from 'react';
 import {
   Box, Slider, Text, Group, Stack,
 } from '@mantine/core';
@@ -189,7 +191,6 @@ function ColorPaletteComparison({ parameters, setAnswer }: ColorPaletteCompariso
     return base;
   }, [originalPaletteNorm, selectedIndex, replacementHex]);
 
-
   // Deterministic left/right assignment (so refresh won't flip)
   const leftIsOriginalBase = useMemo(() => {
     const h = hashString(trialKey || `${paletteId}-${selectedIndex}-${replacementHex}`);
@@ -367,9 +368,9 @@ function ColorPaletteComparison({ parameters, setAnswer }: ColorPaletteCompariso
       leftIsOriginal,
 
       // slider + clean derived labels
-      preference: sliderValue,                // 0..100
-      preferredSide,                          // 'left' | 'right' | 'no_preference'
-      preferredVersion,                       // 'original' | 'modified' | 'no_preference'
+      preference: sliderValue, // 0..100
+      preferredSide, // 'left' | 'right' | 'no_preference'
+      preferredVersion, // 'original' | 'modified' | 'no_preference'
 
       timestamp: new Date().toISOString(),
     };
