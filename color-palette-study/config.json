@@ -72,7 +72,7 @@
       "response": [
         {
           "id": "signature",
-          "prompt": "Please type your full name as your electronic signature",
+          "prompt": "Please type your full name as your signature",
           "location": "belowStimulus",
           "type": "shortText",
           "placeholder": "Type your full name"
