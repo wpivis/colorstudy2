@@ -110,7 +110,7 @@
         "taskid": "ishiharaResponse",
         "plateIndex": 0,
         "correctResponse": "12",
-        "imagePath": "/color-palette-study/assets/ishihara/ishihara-0.png"
+        "imagePath": "color-palette-study/assets/ishihara/ishihara-0.png"
       }
     },
     "ishihara_plate_1": {
@@ -119,7 +119,7 @@
         "taskid": "ishiharaResponse",
         "plateIndex": 1,
         "correctResponse": "8",
-        "imagePath": "/color-palette-study/assets/ishihara/ishihara-1.png"
+        "imagePath": "color-palette-study/assets/ishihara/ishihara-1.png"
       }
     },
     "ishihara_plate_2": {
@@ -128,7 +128,7 @@
         "taskid": "ishiharaResponse",
         "plateIndex": 2,
         "correctResponse": "5",
-        "imagePath": "/color-palette-study/assets/ishihara/ishihara-2.png"
+        "imagePath": "color-palette-study/assets/ishihara/ishihara-2.png"
       }
     },
     "ishihara_plate_3": {
@@ -137,7 +137,7 @@
         "taskid": "ishiharaResponse",
         "plateIndex": 3,
         "correctResponse": "29",
-        "imagePath": "/color-palette-study/assets/ishihara/ishihara-3.png"
+        "imagePath": "color-palette-study/assets/ishihara/ishihara-3.png"
       }
     },
     "ishihara_plate_4": {
@@ -146,7 +146,7 @@
         "taskid": "ishiharaResponse",
         "plateIndex": 4,
         "correctResponse": "74",
-        "imagePath": "/color-palette-study/assets/ishihara/ishihara-4.png"
+        "imagePath": "color-palette-study/assets/ishihara/ishihara-4.png"
       }
     },
     "ishihara_plate_5": {
@@ -155,7 +155,7 @@
         "taskid": "ishiharaResponse",
         "plateIndex": 5,
         "correctResponse": "7",
-        "imagePath": "/color-palette-study/assets/ishihara/ishihara-5.png"
+        "imagePath": "color-palette-study/assets/ishihara/ishihara-5.png"
       }
     },
     "ishihara_plate_6": {
@@ -164,7 +164,7 @@
         "taskid": "ishiharaResponse",
         "plateIndex": 6,
         "correctResponse": "45",
-        "imagePath": "/color-palette-study/assets/ishihara/ishihara-6.png"
+        "imagePath": "color-palette-study/assets/ishihara/ishihara-6.png"
       }
     },
     "ishihara_plate_7": {
@@ -173,7 +173,7 @@
         "taskid": "ishiharaResponse",
         "plateIndex": 7,
         "correctResponse": "2",
-        "imagePath": "/color-palette-study/assets/ishihara/ishihara-7.png"
+        "imagePath": "color-palette-study/assets/ishihara/ishihara-7.png"
       }
     },
     "ishihara_plate_8": {
@@ -182,7 +182,7 @@
         "taskid": "ishiharaResponse",
         "plateIndex": 8,
         "correctResponse": "16",
-        "imagePath": "/color-palette-study/assets/ishihara/ishihara-8.png"
+        "imagePath": "color-palette-study/assets/ishihara/ishihara-8.png"
       }
     },
     "ishihara_plate_9": {
@@ -191,7 +191,7 @@
         "taskid": "ishiharaResponse",
         "plateIndex": 9,
         "correctResponse": "35",
-        "imagePath": "/color-palette-study/assets/ishihara/ishihara-9.png"
+        "imagePath": "color-palette-study/assets/ishihara/ishihara-9.png"
       }
     },
     "ishihara_plate_10": {
@@ -200,7 +200,7 @@
         "taskid": "ishiharaResponse",
         "plateIndex": 10,
         "correctResponse": "96",
-        "imagePath": "/color-palette-study/assets/ishihara/ishihara-10.png"
+        "imagePath": "color-palette-study/assets/ishihara/ishihara-10.png"
       }
     },
     "colorvision_survey": {
