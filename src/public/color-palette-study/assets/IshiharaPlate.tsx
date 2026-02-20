@@ -5,9 +5,9 @@ import {
 import { StimulusParams } from '../../../store/types';
 
 // Auto-import all Ishihara images inside ./ishihara
-const ishiharaImages = import.meta.glob("./ishihara/*.png", {
+const ishiharaImages = import.meta.glob('./ishihara/*.png', {
   eager: true,
-  import: "default",
+  import: 'default',
 }) as Record<string, string>;
 
 function getIshiharaUrl(plateIndex: number) {
@@ -144,7 +144,7 @@ export default function IshiharaPlate({ parameters, setAnswer }: IshiharaPlatePr
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isValid]);
-  
+
   const resolvedSrc = getIshiharaUrl(plateIndex);
 
   return (
