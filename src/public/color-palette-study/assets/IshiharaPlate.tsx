@@ -76,31 +76,29 @@ export default function IshiharaPlate({ parameters, setAnswer }: IshiharaPlatePr
       setAnswer({
         status: false,
         answers: {
-          [taskid]: JSON.stringify({
-            plateIndex,
-            imagePath,
-            timestamp: new Date().toISOString(),
-          }),
+          taskid,
+          plateIndex,
+          imagePath,
+          timestamp: new Date().toISOString(),
+          isComplete: false,
         },
       });
       return;
     }
 
-    const payload = {
-      plateIndex,
-      imagePath,
-      responseRaw: rawInput,
-      responseNormalized: normalized,
-      correctResponse,
-      correctNormalized: normalizedCorrect,
-      isCorrect,
-      timestamp: new Date().toISOString(),
-    };
-
     setAnswer({
       status: true,
       answers: {
-        [taskid]: JSON.stringify(payload),
+        taskid,
+        plateIndex,
+        imagePath,
+        responseRaw: rawInput,
+        responseNormalized: normalized,
+        correctResponse,
+        correctNormalized: normalizedCorrect,
+        isCorrect: isCorrect ?? false,
+        timestamp: new Date().toISOString(),
+        isComplete: true,
       },
     });
   }, [

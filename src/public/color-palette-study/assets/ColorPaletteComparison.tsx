@@ -342,49 +342,19 @@ function ColorPaletteComparison({ parameters, setAnswer }: ColorPaletteCompariso
     const leftLch = leftPaletteHex.map((h) => hexToLabLch(h).lch);
     const rightLch = rightPaletteHex.map((h) => hexToLabLch(h).lch);
 
-    const payload = {
-      trialKey,
-      paletteId,
-      selectedIndex,
-      replacementHex: normalizeHex(replacementHex),
-
-      // canonical hex palettes
-      originalPalette: originalPaletteNorm,
-      modifiedPalette: modifiedPaletteNorm,
-
-      // what participant saw on-screen
-      leftPaletteHex,
-      rightPaletteHex,
-
-      // LAB/LCh per swatch
-      leftPaletteLab: leftLab,
-      rightPaletteLab: rightLab,
-      leftPaletteLch: leftLch,
-      rightPaletteLch: rightLch,
-
-      // counterbalancing / inference helpers
-      flipLR: !!flipLR,
-      leftIsOriginalBase,
-      leftIsOriginal,
-
-      // slider + clean derived labels
-      preference: sliderValue, // 0..100
-      preferredSide, // 'left' | 'right' | 'no_preference'
-      preferredVersion, // 'original' | 'modified' | 'no_preference'
-
-      timestamp: new Date().toISOString(),
-    };
-
     if (!hasInteracted) {
       // Keep Next disabled until participant touches the slider
       setAnswer({
         status: false,
         answers: {
-          [taskid]: JSON.stringify({
-            paletteId,
-            // include anything else, but status=false keeps Next disabled
-            timestamp: new Date().toISOString(),
-          }),
+          taskid,
+          trialKey,
+          paletteId: paletteId ?? '',
+          selectedIndex,
+          replacementHex: normalizeHex(replacementHex),
+          leftIsOriginal,
+          timestamp: new Date().toISOString(),
+          hasInteracted: false,
         },
       });
       return;
@@ -394,7 +364,33 @@ function ColorPaletteComparison({ parameters, setAnswer }: ColorPaletteCompariso
     setAnswer({
       status: true,
       answers: {
-        [taskid]: JSON.stringify(payload),
+        taskid,
+        trialKey,
+        paletteId: paletteId ?? '',
+        selectedIndex,
+        replacementHex: normalizeHex(replacementHex),
+        
+        // participant's actual preference and left/right info
+        leftIsOriginal,
+        flipLR: !!flipLR,
+        preferredSide, // 'left' | 'right' | 'no_preference'
+        preferredVersion, // 'original' | 'modified' | 'no_preference'
+        preference: sliderValue, // numeric 0..100
+
+        // palettes (keep as JSON strings because they are arrays)
+        originalPalette: JSON.stringify(originalPaletteNorm),
+        modifiedPalette: JSON.stringify(modifiedPaletteNorm),
+        leftPaletteHex: JSON.stringify(leftPaletteHex),
+        rightPaletteHex: JSON.stringify(rightPaletteHex),
+
+        // Lab/Lch (also arrays/objects)
+        leftPaletteLab: JSON.stringify(leftLab),
+        rightPaletteLab: JSON.stringify(rightLab),
+        leftPaletteLch: JSON.stringify(leftLch),
+        rightPaletteLch: JSON.stringify(rightLch),
+
+        timestamp: new Date().toISOString(),
+        hasInteracted: true,
       },
     });
   }, [
