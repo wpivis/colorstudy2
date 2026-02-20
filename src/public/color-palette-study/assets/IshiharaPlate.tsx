@@ -4,6 +4,18 @@ import {
 } from '@mantine/core';
 import { StimulusParams } from '../../../store/types';
 
+// Auto-import all Ishihara images inside ./ishihara
+const ishiharaImages = import.meta.glob("./ishihara/*.png", {
+  eager: true,
+  import: "default",
+}) as Record<string, string>;
+
+function getIshiharaUrl(plateIndex: number) {
+  const needle = `/ishihara-${plateIndex}.png`;
+  const matchKey = Object.keys(ishiharaImages).find((k) => k.endsWith(needle));
+  return matchKey ? ishiharaImages[matchKey] : undefined;
+}
+
 type IshiharaPlateProps = StimulusParams<{
   taskid: string; // should match the reactive response id in config (e.g., "ishiharaResponse")
   plateIndex: number; // 0..10
@@ -132,6 +144,8 @@ export default function IshiharaPlate({ parameters, setAnswer }: IshiharaPlatePr
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isValid]);
+  
+  const resolvedSrc = getIshiharaUrl(plateIndex);
 
   return (
     <Stack gap="md" p="md" align="center">
@@ -154,7 +168,7 @@ export default function IshiharaPlate({ parameters, setAnswer }: IshiharaPlatePr
             }}
           >
             <Image
-              src={imagePath}
+              src={resolvedSrc}
               alt={`Ishihara plate ${plateIndex}`}
               fit="contain"
               style={{
