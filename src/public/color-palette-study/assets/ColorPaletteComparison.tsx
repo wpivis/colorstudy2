@@ -369,7 +369,7 @@ function ColorPaletteComparison({ parameters, setAnswer }: ColorPaletteCompariso
         paletteId: paletteId ?? '',
         selectedIndex,
         replacementHex: normalizeHex(replacementHex),
-        
+
         // participant's actual preference and left/right info
         leftIsOriginal,
         flipLR: !!flipLR,
