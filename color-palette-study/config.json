@@ -89,6 +89,63 @@
         }
       ]
     },
+    "demographics": {
+      "type": "questionnaire",
+      "description": "Basic demographic questions including gender, age, and education",
+      "response": [
+        {
+          "id": "gender",
+          "prompt": "What is your **gender**?",
+          "required": true,
+          "location": "aboveStimulus",
+          "type": "radio",
+          "withOther": true,
+          "stylesheetPath": "color-palette-study/assets/demographics-compact.css",
+          "options": [
+            "Woman",
+            "Man",
+            "Non-binary / Genderqueer / Third gender",
+            "Genderfluid / Gender non-conforming",
+            "Questioning",
+            "Prefer not to say"
+          ]
+        },
+        {
+          "id": "age",
+          "prompt": "What is your **age**?",
+          "required": true,
+          "location": "aboveStimulus",
+          "type": "radio",
+          "stylesheetPath": "color-palette-study/assets/demographics-compact.css",
+          "options": [
+            "Under 18 years",
+            "18-24 years",
+            "25-34 years",
+            "35-44 years",
+            "45-54 years",
+            "55-64 years",
+            "65 years or older",
+            "Prefer not to say"
+          ]
+        },
+        {
+          "id": "education",
+          "prompt": "What is the **highest degree or level of education** you have completed?",
+          "required": true,
+          "location": "aboveStimulus",
+          "type": "radio",
+          "withOther": true,
+          "stylesheetPath": "color-palette-study/assets/demographics-compact.css",
+          "options": [
+            "Less than high school",
+            "High school diploma or equivalent",
+            "Bachelor's degree or equivalent",
+            "Master's degree or equivalent",
+            "Doctoral degree or equivalent"
+          ]
+        }
+      ]
+    },
     "introduction": {
       "type": "markdown",
       "path": "color-palette-study/assets/introduction.md",
@@ -11098,6 +11155,7 @@
     "order": "fixed",
     "components": [
       "consent",
+      "demographics",
       "introduction",
       {
         "id": "block_1",

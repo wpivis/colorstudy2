@@ -57,6 +57,7 @@
     "aireplicate-vibe-exp3",
     "visualization-vibes",
     "decision-theory-study",
+    "color-palette-study",
     "study-independents-declarations"
   ],
   "configs": {
@@ -239,6 +240,9 @@
     },
     "decision-theory-study": {
       "path": "decision-theory-study/config.json"
+    },
+    "color-palette-study": {
+      "path": "color-palette-study/config.json"
     },
     "study-independents-declarations": {
       "path": "study-independents-declarations/config.json"
