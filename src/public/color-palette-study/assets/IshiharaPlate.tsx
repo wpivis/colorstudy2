@@ -16,6 +16,19 @@ function getIshiharaUrl(plateIndex: number) {
   return matchKey ? ishiharaImages[matchKey] : undefined;
 }
 
+// --- Preload all Ishihara images once per page load ---
+let ishiharaPreloaded = false;
+
+function preloadAllIshihara() {
+  if (ishiharaPreloaded) return;
+  ishiharaPreloaded = true;
+
+  Object.values(ishiharaImages).forEach((src) => {
+    const img = new window.Image();
+    img.src = src;
+  });
+}
+
 type IshiharaPlateProps = StimulusParams<{
   taskid: string; // should match the reactive response id in config (e.g., "ishiharaResponse")
   plateIndex: number; // 0..10
@@ -69,6 +82,10 @@ export default function IshiharaPlate({ parameters, setAnswer }: IshiharaPlatePr
     // If participant types "none", treat as literal none.
     return normalized === normalizedCorrect;
   }, [isComplete, normalized, normalizedCorrect]);
+
+  useEffect(() => {
+    preloadAllIshihara();
+  }, []);
 
   // Disable Next until they provide a response; once provided, save payload
   useEffect(() => {
