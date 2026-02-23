@@ -6,7 +6,7 @@
       "type": "questionnaire",
       "description": "Basic demographic questions including gender, age, and education",
       "style": {
-        "fontSize": "12px"
+        "fontSize": "14px"
       },
       "response": [
         {
