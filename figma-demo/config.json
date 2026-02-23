@@ -1,0 +1,77 @@
+{
+  "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.3.2/src/parser/StudyConfigSchema.json",
+  "studyMetadata": {
+    "title": "Prototype Usability Study",
+    "version": "pilot",
+    "authors": ["Your Name"],
+    "date": "2026-02-21",
+    "description": "A think-aloud usability study with screen and audio recording.",
+    "organizations": ["Your Institution"]
+  },
+  "uiConfig": {
+    "contactEmail": "your@email.com",
+    "logoPath": "revisitAssets/revisitLogoSquare.svg",
+    "withProgressBar": true,
+    "withSidebar": true,
+    "recordAudio": true,
+    "recordScreen": true
+  },
+  "importedLibraries": ["mic-check", "screen-recording"],
+  "components": {
+    "introduction": {
+      "type": "markdown",
+      "path": "figma-demo/assets/introduction.md",
+      "response": []
+    },
+    "figmaTask": {
+      "type": "website",
+      "recordAudio": true,
+      "recordScreen": true,
+      "path": "https://crown-ravel-61908944.figma.site",
+      "instruction": "Please explore the prototype below. As you navigate, speak your thoughts aloud — tell us what you notice, what you expect, and anything that feels unclear or surprising.",
+      "response": [
+        {
+          "id": "think-aloud-instructions",
+          "type": "textOnly",
+          "location": "sidebar",
+          "prompt": "### Think-Aloud Instructions\n\nYour screen and audio are being recorded. Please say out loud everything you are thinking as you move through the prototype.\n\n**As you explore, try to describe:**\n\n- What you notice on each screen\n- What you expect to happen when you tap or click something\n- What feels clear or confusing\n- Why you choose certain actions\n\nThere are no right or wrong actions — we are evaluating the design, not you."
+        }
+      ]
+    },
+    "postTaskQuestions": {
+      "type": "questionnaire",
+      "recordAudio": true,
+      "response": [
+        {
+          "id": "satisfaction",
+          "prompt": "Rate your satisfaction with the following aspects of the prototype.",
+          "location": "aboveStimulus",
+          "type": "matrix-radio",
+          "answerOptions": "satisfaction5",
+          "questionOptions": [
+            "Overall Design",
+            "Ease of Navigation",
+            "Visual Clarity",
+            "Completeness of Information"
+          ]
+        },
+        {
+          "id": "open-feedback",
+          "prompt": "What stood out most during your exploration — positive or negative?",
+          "location": "aboveStimulus",
+          "type": "longText",
+          "placeholder": "Share your thoughts here..."
+        }
+      ]
+    }
+  },
+  "sequence": {
+    "order": "fixed",
+    "components": [
+      "introduction",
+      "$screen-recording.co.screenRecordingPermission",
+      "figmaTask",
+      "postTaskQuestions"
+    ]
+  }
+}
