@@ -5,6 +5,9 @@
     "demographics": {
       "type": "questionnaire",
       "description": "Basic demographic questions including gender, age, and education",
+      "style": {
+        "fontSize": "10px"
+      },
       "response": [
         {
           "id": "gender",
