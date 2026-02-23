@@ -1,12 +1,16 @@
 {
-  "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.3.2/src/parser/GlobalConfigSchema.json",
+  "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.2.0/src/parser/GlobalConfigSchema.json",
   "configsList": [
-    "color-palette-study",
+    "ai-viz-calibration",
+    "scalesstudy-prototype",
+    "scalesstudy-original",
+    "scalesstudy",
+    "study-political-incivility",
     "tutorial",
-    "tutorial-replication",
     "demo-html",
     "demo-html-input",
     "demo-screen-recording",
+    "figma-demo",
     "demo-survey",
     "demo-training",
     "demo-html-trrack",
@@ -19,50 +23,48 @@
     "demo-dynamic",
     "demo-style",
     "demo-yaml",
-    "demo-ranking-widget",
     "example-brush-interactions",
     "example-cleveland",
     "example-mvnv",
     "example-VLAT-adaptive",
     "example-VLAT-full-randomized",
     "example-VLAT-mini-randomized",
-    "library-adaptive-vlat",
     "library-beauvis",
     "library-berlin-num",
     "library-calvi",
     "library-color-blindness",
     "library-demographics",
-    "library-graph-literacy-scale",
     "library-mic-check",
+    "library-screen-recording",
     "library-mini-vlat",
     "library-nasa-tlx",
     "library-previs",
     "library-quis",
     "library-sam",
-    "library-screen-recording",
     "library-smeq",
     "library-sus",
-    "library-umux",
-    "library-umux-lite",
-    "library-virtual-chinrest",
     "library-vlat",
+    "library-adaptive-vlat",
+    "library-graph-literacy-scale",
     "test-audio",
     "test-library",
     "test-likert-matrix",
     "test-parser-errors",
     "test-randomization",
     "test-skip-logic",
-    "test-step-logic"
+    "test-step-logic",
+    "aireplicate-vibe-exp1",
+    "aireplicate-vibe-exp3",
+    "visualization-vibes",
+    "decision-theory-study",
+    "study-independents-declarations"
   ],
   "configs": {
-    "color-palette-study": {
-      "path": "color-palette-study/config.json"
+    "ai-viz-calibration": {
+      "path": "ai-viz-calibration/config.json"
     },
     "tutorial": {
       "path": "tutorial/config.json"
-    },
-    "tutorial-replication": {
-      "path": "tutorial/replication-config.json"
     },
     "demo-video-slider": {
       "path": "demo-video-slider/config.json"
@@ -72,6 +74,9 @@
     },
     "demo-screen-recording": {
       "path": "demo-screen-recording/config.json"
+    },
+    "figma-demo": {
+      "path": "figma-demo/config.json"
     },
     "demo-html-input": {
       "path": "demo-html-input/config.json"
@@ -108,9 +113,6 @@
     },
     "demo-yaml": {
       "path": "demo-yaml/config.yaml"
-    },
-    "demo-ranking-widget": {
-      "path": "demo-ranking-widget/config.json"
     },
     "example-brush-interactions": {
       "path": "example-brush-interactions/config.json"
@@ -151,12 +153,12 @@
       "path": "library-demographics/config.json",
       "test": true
     },
-    "library-graph-literacy-scale": {
-      "path": "library-graph-literacy-scale/config.json",
-      "test": true
-    },
     "library-mic-check": {
       "path": "library-mic-check/config.json",
+      "test": true
+    },
+    "library-screen-recording": {
+      "path": "library-screen-recording/config.json",
       "test": true
     },
     "library-mini-vlat": {
@@ -179,10 +181,6 @@
       "path": "library-sam/config.json",
       "test": true
     },
-    "library-screen-recording": {
-      "path": "library-screen-recording/config.json",
-      "test": true
-    },
     "library-smeq": {
       "path": "library-smeq/config.json",
       "test": true
@@ -193,6 +191,10 @@
     },
     "library-vlat": {
       "path": "library-vlat/config.json",
+      "test": true
+    },
+    "library-graph-literacy-scale": {
+      "path": "library-graph-literacy-scale/config.json",
       "test": true
     },
     "test-audio": {
@@ -222,21 +224,36 @@
       "path": "test-step-logic/config.json",
       "test": true
     },
-    "library-umux": {
-      "path": "library-umux/config.json",
-      "test": true
-    },
-    "library-umux-lite": {
-      "path": "library-umux-lite/config.json",
-      "test": true
-    },
-    "library-virtual-chinrest": {
-      "path": "library-virtual-chinrest/config.json",
-      "test": true
-    },
     "example-VLAT-adaptive": {
       "path": "example-VLAT-adaptive/config.json",
       "test": true
+    },
+    "aireplicate-vibe-exp1": {
+      "path": "aireplicate-vibe-exp1/config.json"
+    },
+    "aireplicate-vibe-exp3": {
+      "path": "aireplicate-vibe-exp3/config.json"
+    },
+    "visualization-vibes": {
+      "path": "visualization-vibes/config.json"
+    },
+    "decision-theory-study": {
+      "path": "decision-theory-study/config.json"
+    },
+    "study-independents-declarations": {
+      "path": "study-independents-declarations/config.json"
+    },
+    "study-political-incivility": {
+      "path": "study-political-incivility/config.json"
+    },
+    "scalesstudy": {
+      "path": "scalesstudy/config.json"
+    },
+    "scalesstudy-prototype": {
+      "path": "scalesstudy/config-prototype.json"
+    },
+    "scalesstudy-original": {
+      "path": "scalesstudy/config-original-data.json"
     }
   }
 }
