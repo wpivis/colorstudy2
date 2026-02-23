@@ -1,77 +1,56 @@
-#gender .mantine-InputWrapper-label,
-#age .mantine-InputWrapper-label,
-#education .mantine-InputWrapper-label,
-#gender .mantine-InputWrapper-label .mantine-Text-root,
-#age .mantine-InputWrapper-label .mantine-Text-root,
-#education .mantine-InputWrapper-label .mantine-Text-root {
-  font-size: 0.88rem !important;
-  --text-fz: 0.88rem !important;
-  line-height: 1.12 !important;
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-#gender .mantine-Radio-label,
-#age .mantine-Radio-label,
-#education .mantine-Radio-label,
-#gender .mantine-Input-input,
-#age .mantine-Input-input,
-#education .mantine-Input-input,
-#gender .mantine-InputWrapper-description,
-#age .mantine-InputWrapper-description,
-#education .mantine-InputWrapper-description {
-  font-size: 0.79rem !important;
-  --text-fz: 0.79rem !important;
-  line-height: 1.12 !important;
+/* Center the whole demographics block */
+#gender,
+#age {
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
 }
 
-#gender .no-last-child-bottom-padding :is(p, li),
-#age .no-last-child-bottom-padding :is(p, li),
-#education .no-last-child-bottom-padding :is(p, li) {
-  margin-bottom: 0.125rem;
-}
-
-#gender .mantine-Group-root,
-#age .mantine-Group-root,
-#education .mantine-Group-root {
-  gap: 0.25rem !important;
-}
-
-#gender.response,
-#age.response,
-#education.response {
-  margin-bottom: 0.4rem !important;
-}
-
+/* Trim Mantine's built-in spacing that can cause a few extra px */
 #gender .mantine-InputWrapper-root,
-#age .mantine-InputWrapper-root,
-#education .mantine-InputWrapper-root {
-  --input-margin-top: 0.15rem;
-}
-
-#gender .mantine-Radio-root,
-#age .mantine-Radio-root,
-#education .mantine-Radio-root {
-  margin-top: 0.05rem !important;
-  margin-bottom: 0.05rem !important;
+#age .mantine-InputWrapper-root {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 #gender .mantine-Stack-root,
-#age .mantine-Stack-root,
-#education .mantine-Stack-root {
+#age .mantine-Stack-root {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Radio options: force vertical list (column) */
+#gender .mantine-Group-root,
+#age .mantine-Group-root {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  flex-wrap: nowrap !important;
+  gap: 0.35rem !important;  /* use gap instead of row-gap */
+}
+
+/* If Stack is wrapping sections, make it single column */
+#gender .mantine-Stack-root,
+#age .mantine-Stack-root {
   display: grid !important;
-  grid-template-columns: repeat(2, minmax(250px, 320px));
-  justify-content: start;
-  column-gap: 0.35rem !important;
-  row-gap: 0.15rem !important;
+  grid-template-columns: 1fr !important;
+  justify-content: stretch;
+  row-gap: 0.35rem !important;
 }
 
-#gender .mantine-Stack-root > div,
-#age .mantine-Stack-root > div,
-#education .mantine-Stack-root > div {
-  min-width: 0;
-}
-
-#gender .mantine-Input-input,
-#age .mantine-Input-input,
-#education .mantine-Input-input {
-  width: 100%;
+/* Prevent long labels from stretching horizontally */
+#gender .mantine-Radio-label,
+#age .mantine-Radio-label {
+  white-space: normal !important;
 }
