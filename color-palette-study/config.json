@@ -127,22 +127,6 @@
             "65 years or older",
             "Prefer not to say"
           ]
-        },
-        {
-          "id": "education",
-          "prompt": "What is the **highest degree or level of education** you have completed?",
-          "required": true,
-          "location": "aboveStimulus",
-          "type": "radio",
-          "withOther": true,
-          "stylesheetPath": "color-palette-study/assets/demographics-compact.css",
-          "options": [
-            "Less than high school",
-            "High school diploma or equivalent",
-            "Bachelor's degree or equivalent",
-            "Master's degree or equivalent",
-            "Doctoral degree or equivalent"
-          ]
         }
       ]
     },
