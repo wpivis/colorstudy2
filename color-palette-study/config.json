@@ -13,7 +13,7 @@
     ]
   },
   "uiConfig": {
-    "contactEmail": "contact@revisit.dev",
+    "contactEmail": "akumble@wisc.edu",
     "logoPath": "revisitAssets/revisitLogoSquare.svg",
     "withProgressBar": false,
     "autoDownloadStudy": false,
