@@ -2,9 +2,9 @@
   {
     "palette_id": "1",
     "colors": [
-      "#58b5e1",
-      "#41d26b",
-      "#996f31"
+      "#399283",
+      "#95d78d",
+      "#ddb35b"
     ],
     "metadata": {
       "palette_size": "3",
@@ -17,9 +17,9 @@
   {
     "palette_id": "2",
     "colors": [
-      "#208eb7",
-      "#1ceaf9",
-      "#214d4e"
+      "#4f8c9d",
+      "#77d1fd",
+      "#1c4c5e"
     ],
     "metadata": {
       "palette_size": "3",
@@ -32,9 +32,9 @@
   {
     "palette_id": "3",
     "colors": [
-      "#069668",
-      "#7fdb83",
-      "#214d4e"
+      "#256676",
+      "#1eefc9",
+      "#5daba6"
     ],
     "metadata": {
       "palette_size": "3",
@@ -47,9 +47,9 @@
   {
     "palette_id": "4",
     "colors": [
-      "#21f0b6",
-      "#c345a3",
-      "#0a60a8"
+      "#a1def0",
+      "#7c338b",
+      "#a8e667"
     ],
     "metadata": {
       "palette_size": "3",
@@ -62,9 +62,9 @@
   {
     "palette_id": "5",
     "colors": [
-      "#32964d",
-      "#93e0f0",
-      "#20502e"
+      "#58b5e1",
+      "#2a6b2a",
+      "#10eddc"
     ],
     "metadata": {
       "palette_size": "3",
@@ -77,9 +77,9 @@
   {
     "palette_id": "6",
     "colors": [
-      "#069668",
-      "#7ce5e6",
-      "#155126"
+      "#64baaa",
+      "#1d6d1f",
+      "#38f0ac"
     ],
     "metadata": {
       "palette_size": "3",
@@ -92,9 +92,9 @@
   {
     "palette_id": "7",
     "colors": [
-      "#aee39a",
-      "#bc9495",
-      "#387472"
+      "#a1def0",
+      "#a6665f",
+      "#5f9f5a"
     ],
     "metadata": {
       "palette_size": "3",
@@ -107,9 +107,9 @@
   {
     "palette_id": "8",
     "colors": [
-      "#69ef7b",
-      "#496e8b",
-      "#aae3a4"
+      "#01c472",
+      "#45555a",
+      "#4bd6fd"
     ],
     "metadata": {
       "palette_size": "3",
@@ -122,9 +122,9 @@
   {
     "palette_id": "9",
     "colors": [
-      "#72e5ef",
-      "#1b511d",
-      "#369094"
+      "#8de4d3",
+      "#195036",
+      "#54b2fc"
     ],
     "metadata": {
       "palette_size": "3",
@@ -137,9 +137,9 @@
   {
     "palette_id": "10",
     "colors": [
-      "#a1def0",
-      "#683a38",
-      "#1eefc9"
+      "#b4ddd4",
+      "#432ab7",
+      "#bde267"
     ],
     "metadata": {
       "palette_size": "3",
@@ -152,9 +152,9 @@
   {
     "palette_id": "11",
     "colors": [
-      "#58b5e1",
-      "#255026",
-      "#8fda59"
+      "#52ef99",
+      "#02531d",
+      "#93d5a9"
     ],
     "metadata": {
       "palette_size": "3",
@@ -168,8 +168,8 @@
     "palette_id": "12",
     "colors": [
       "#0cc0aa",
-      "#075c62",
-      "#aedbf0"
+      "#294d46",
+      "#93d0e2"
     ],
     "metadata": {
       "palette_size": "3",
@@ -182,9 +182,9 @@
   {
     "palette_id": "13",
     "colors": [
-      "#68affc",
-      "#68374f",
-      "#2eece6"
+      "#52ef99",
+      "#6f3631",
+      "#9cd597"
     ],
     "metadata": {
       "palette_size": "3",
@@ -197,9 +197,9 @@
   {
     "palette_id": "14",
     "colors": [
-      "#4f8c9d",
-      "#90ea66",
-      "#760796"
+      "#8de4d3",
+      "#4c3e76",
+      "#c0e15c"
     ],
     "metadata": {
       "palette_size": "3",
@@ -212,9 +212,9 @@
   {
     "palette_id": "15",
     "colors": [
-      "#a1def0",
-      "#1e6c3c",
-      "#2fddce"
+      "#64baaa",
+      "#0b522e",
+      "#7aed7b"
     ],
     "metadata": {
       "palette_size": "3",
@@ -227,9 +227,9 @@
   {
     "palette_id": "16",
     "colors": [
-      "#b4ddd4",
-      "#832522",
-      "#4dc172"
+      "#96e97c",
+      "#cb2c09",
+      "#85e5dd"
     ],
     "metadata": {
       "palette_size": "3",
@@ -242,9 +242,9 @@
   {
     "palette_id": "17",
     "colors": [
-      "#208eb7",
-      "#84eb86",
-      "#4443b4"
+      "#01c472",
+      "#2f5bb1",
+      "#add51f"
     ],
     "metadata": {
       "palette_size": "3",
@@ -257,9 +257,9 @@
   {
     "palette_id": "18",
     "colors": [
-      "#68affc",
-      "#0e503e",
-      "#7ce5e6"
+      "#78b98f",
+      "#614682",
+      "#41d26b"
     ],
     "metadata": {
       "palette_size": "3",
@@ -272,9 +272,9 @@
   {
     "palette_id": "19",
     "colors": [
-      "#b4ddd4",
-      "#84241a",
-      "#51f310"
+      "#64baaa",
+      "#8a1341",
+      "#5fe063"
     ],
     "metadata": {
       "palette_size": "3",
@@ -287,9 +287,9 @@
   {
     "palette_id": "20",
     "colors": [
-      "#a0e3b7",
-      "#851e39",
-      "#0df38f"
+      "#01c472",
+      "#8a1c12",
+      "#c0e087"
     ],
     "metadata": {
       "palette_size": "3",
@@ -302,9 +302,9 @@
   {
     "palette_id": "21",
     "colors": [
-      "#a1def0",
-      "#34466d",
-      "#57cd9c"
+      "#399283",
+      "#b8e450",
+      "#0a4f4e"
     ],
     "metadata": {
       "palette_size": "3",
@@ -317,9 +317,9 @@
   {
     "palette_id": "22",
     "colors": [
-      "#8de4d3",
-      "#d30c45",
-      "#94ea5b"
+      "#a1def0",
+      "#8b382c",
+      "#ade47c"
     ],
     "metadata": {
       "palette_size": "3",
@@ -332,9 +332,9 @@
   {
     "palette_id": "23",
     "colors": [
-      "#a0e3b7",
-      "#992a1c",
-      "#88dc40"
+      "#8de4d3",
+      "#d60724",
+      "#96da31"
     ],
     "metadata": {
       "palette_size": "3",
@@ -347,9 +347,9 @@
   {
     "palette_id": "24",
     "colors": [
-      "#8de4d3",
-      "#553096",
-      "#c2df7d"
+      "#a1def0",
+      "#284e37",
+      "#8de990"
     ],
     "metadata": {
       "palette_size": "3",
@@ -362,9 +362,9 @@
   {
     "palette_id": "25",
     "colors": [
-      "#b4ddd4",
-      "#874e57",
-      "#6cd030"
+      "#a0e3b7",
+      "#d34069",
+      "#a9d541"
     ],
     "metadata": {
       "palette_size": "3",
@@ -377,9 +377,9 @@
   {
     "palette_id": "26",
     "colors": [
-      "#72e5ef",
-      "#d6061a",
-      "#91da4d"
+      "#41bbc5",
+      "#6f1996",
+      "#a4d483"
     ],
     "metadata": {
       "palette_size": "3",
@@ -392,9 +392,9 @@
   {
     "palette_id": "27",
     "colors": [
-      "#72e5ef",
-      "#7b038e",
-      "#40e18c"
+      "#21f0b6",
+      "#374475",
+      "#94da40"
     ],
     "metadata": {
       "palette_size": "3",

@@ -549,7 +549,7 @@ function ColorPaletteComparison({ parameters, setAnswer }: ColorPaletteCompariso
                 value={sliderValue}
                 onChange={(v) => {
                   setSliderValue(v);
-                  if (!hasInteracted) setHasInteracted(true);
+                  if (!hasInteracted && v !== 50) setHasInteracted(true);
                 }}
                 marks={marks}
                 min={0}
