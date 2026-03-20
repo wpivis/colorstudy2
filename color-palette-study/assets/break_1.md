@@ -3,7 +3,7 @@
 ## Break
 
 <p style="font-size: 18px;">
-You have completed <strong>1 out of 6 blocks</strong>.
+You have completed <strong>50% of the trials</strong>.
 </p>
 
 <p style="font-size: 18px;">
