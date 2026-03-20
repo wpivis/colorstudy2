@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.2.0/src/parser/StudyConfigSchema.json",
   "studyMetadata": {
     "title": "Color Preferences Study",
-    "version": "study2",
+    "version": "pilot",
     "authors": [
       ""
     ],
@@ -14,7 +14,7 @@
   },
   "uiConfig": {
     "urlParticipantIdParam": "PROLIFIC_PID",
-      "studyEndMsg": "Thank you for completing the study! Return to Prolific: [https://app.prolific.com/submissions/complete?cc=studyID](https://app.prolific.com/submissions/complete?cc=studyID)",
+    "studyEndMsg": "Thank you for completing the study! Return to Prolific: [https://app.prolific.com/submissions/complete?cc=studyID](https://app.prolific.com/submissions/complete?cc=studyID)",
     "contactEmail": "akumble@wisc.edu",
     "logoPath": "revisitAssets/revisitLogoSquare.svg",
     "withProgressBar": false,
