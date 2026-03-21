@@ -6,7 +6,7 @@ Before you begin, please read this page carefully.
 
 **Procedure:** You will be asked to **rate your preference between pairs of color palettes**, using a continuous scale from *"Strongly prefer left palette"* to *"Strongly prefer right palette"*.
 
-**Duration:** The experiment will take about 30 minutes, with 5 optional breaks.
+**Duration:** The experiment will take about 15 minutes, with an optional break in between.
 
 **Risks to study participants:** There are no expected risks to you beyond using a computer in a way similar to everyday activity.
 
