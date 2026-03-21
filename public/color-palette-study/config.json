@@ -14,7 +14,7 @@
   },
   "uiConfig": {
     "urlParticipantIdParam": "PROLIFIC_PID",
-    "studyEndMsg": "Thank you for completing the study! Return to Prolific: [https://app.prolific.com/submissions/complete?cc=studyID](https://app.prolific.com/submissions/complete?cc=studyID)",
+    "studyEndMsg": "Thank you for completing the study! Return to Prolific: [https://app.prolific.com/submissions/complete?cc=C1FM9M5M](https://app.prolific.com/submissions/complete?cc=C1FM9M5M)",
     "contactEmail": "akumble@wisc.edu",
     "logoPath": "revisitAssets/revisitLogoSquare.svg",
     "withProgressBar": false,
